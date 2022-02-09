@@ -1,0 +1,721 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/um/SoundOntology#"
+     xml:base="https://w3id.org/um/SoundOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="https://w3id.org/um/SoundOntology">
+        <rdfs:comment>a prototype for the sound ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#hasAttribute -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/um/SoundsOntology#hasAttribute"/>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#hasMechanism -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/um/SoundsOntology#hasMechanism">
+        <rdfs:subPropertyOf rdf:resource="http://w3id.org/um/SoundsOntology#producedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/um/SoundsOntology#hasMember"/>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/um/SoundsOntology#hasPart"/>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#involves -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/um/SoundsOntology#involves">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#producedBy -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/um/SoundsOntology#producedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#AerodynamicMechanism -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#AerodynamicMechanism">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Gas"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Air -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Air">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#AirFlow -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#AirFlow">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Applause -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Applause">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Clap"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasAttribute"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#ContinuousRecurrence"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#producedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Person"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:prefLabel xml:lang="en">Applause</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Clap -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Clap">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Collision"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#producedBy"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://w3id.org/um/SoundsOntology#Hand"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>hand clap (single)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Collection -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Collection">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Collection_of_People -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Collection_of_People">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Collection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMember"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Collision -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Collision">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>a collision is any event in which two or more bodies exert forces on each other in a relatively short time.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Compression -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Compression">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Solid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>compression is the application of balanced inward (&quot;pushing&quot;) forces to different points on a material or structure, that is, forces with no net sum or torque directed so as to reduce its size in one or more directions</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#ContinuousRecurrence -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#ContinuousRecurrence">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#RecurringSequence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Deformation -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Deformation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Compression"/>
+        <rdfs:comment>a deformation is compression that causes a change in the original configuration of an object.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#ElasticCollision -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#ElasticCollision">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Collision"/>
+        <rdfs:comment>an elastic collision is a collision between two bodies in which the total kinetic energy of the two bodies remains the same.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#ElasticDeformation -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#ElasticDeformation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Deformation"/>
+        <rdfs:comment>An elastic deformation is a deformation which ceases to exist after stress field is removed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#EventRecurrence -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#EventRecurrence">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#RecurringSequence"/>
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#SingleRecurrence"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#EventRegularity -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#EventRegularity">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#PatternedRegularity"/>
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#RandomRegularity"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Exhalation -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Exhalation">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Gas"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Lung"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment>Exhalation is the flow of the breath out of an organism.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#FluidDynamicMechanism -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#FluidDynamicMechanism">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Liquid"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Foot -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Foot">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#ObjectPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Gas -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Gas">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#MaterialPhase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Hand -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Hand">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#ObjectPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Howl -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Howl">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Gas"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#producedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#VocalCord"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#InelasticCollision -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#InelasticCollision">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Collision"/>
+        <rdfs:comment>an inelastic collision is a collision in which kinetic energy is not conserved due to the action of internal friction.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Liquid -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Liquid">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#MaterialPhase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Lung -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Lung">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#ObjectPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#MaterialPhase -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#MaterialPhase">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Gas"/>
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Liquid"/>
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Solid"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Object -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Object"/>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#ObjectPart -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#ObjectPart">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://w3id.org/um/SoundsOntology#hasPart"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#PartiallyInelasticCollision -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#PartiallyInelasticCollision">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Collision"/>
+        <rdfs:comment>A partially inelastic collision is a collision in which the objects involved in the collisions do not stick, but some kinetic energy is still lost.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#PatternedRegularity -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#PatternedRegularity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#EventRegularity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#PeriodicRegularity -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#PeriodicRegularity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#PatternedRegularity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Person -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Person">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#RandomRegularity -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#RandomRegularity">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#EventRegularity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#RecurringSequence -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#RecurringSequence">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#EventRecurrence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#RecurringSound -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#RecurringSound">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasAttribute"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#RecurringSequence"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#SingleClap -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#SingleClap">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Clap"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasAttribute"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#SingleRecurrence"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#SingleRecurrence -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#SingleRecurrence">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#EventRecurrence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Solid -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Solid">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#MaterialPhase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Sound -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Sound"/>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#SoundMechanism -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#SoundProducedByLocomotion -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#SoundProducedByLocomotion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#producedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Foot"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#SoundProducedByVocalCord -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#SoundProducedByVocalCord">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#producedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#VocalCord"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#SoundsProducedByClapping -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#SoundsProducedByClapping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Clap"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#VibratingSolidMechanism -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#VibratingSolidMechanism">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#SoundMechanism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#involves"/>
+                        <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Solid"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#VocalCord -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#VocalCord">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#ObjectPart"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/um/SoundsOntology#Walking -->
+
+    <owl:Class rdf:about="http://w3id.org/um/SoundsOntology#Walking">
+        <rdfs:subClassOf rdf:resource="http://w3id.org/um/SoundsOntology#Sound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#hasMechanism"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Collision"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://w3id.org/um/SoundsOntology#producedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://w3id.org/um/SoundsOntology#Foot"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Foot"/>
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Hand"/>
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#Lung"/>
+            <rdf:Description rdf:about="http://w3id.org/um/SoundsOntology#VocalCord"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
