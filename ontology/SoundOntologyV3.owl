@@ -1612,8 +1612,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#BodilyFunctionSound"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Mouth"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyV3#Bubble"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Mouth"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3604,6 +3614,17 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyV3#Bubble">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Liquid"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#SoundMechanism"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Liquid"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
