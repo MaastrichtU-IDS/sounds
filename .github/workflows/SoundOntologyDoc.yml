@@ -44,7 +44,7 @@ jobs:
     
     - name: Commit and push
       run: |
-        git config --global user.name 'Martin Bremm'
+        git config --global user.name 'martinbremm'
         git config --global user.email 'm.bremm@student.maastrichtuniversity.nl'
         cp templates/description-en.html docs/lode/sections/description-en.html
         cp templates/references-en.html docs/lode/sections/references-en.html
