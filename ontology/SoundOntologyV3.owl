@@ -1171,6 +1171,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Dive">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#MovementSound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Splash"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1273,7 +1279,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Mouth"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Mouth"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Tooth"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1480,12 +1493,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Footstep">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#LocomotionSound"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Step"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1510,18 +1517,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Gallop">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#LocomotionSound"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Step"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1758,7 +1753,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1831,7 +1826,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1854,7 +1849,7 @@
                                     <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Foot"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
+                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
                                     </owl:Restriction>
                                 </owl:unionOf>
                             </owl:Class>
@@ -1883,9 +1878,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs -->
+    <!-- http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs">
+    <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#BodyPart"/>
     </owl:Class>
     
@@ -1945,6 +1940,10 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#MovementSound"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
                         <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Step"/>
                     </owl:Restriction>
@@ -1964,7 +1963,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2433,13 +2432,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Step"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2963,7 +2956,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -2984,14 +2977,18 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#LocomotionSound"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Foot"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Impact"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Impact"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Foot"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3065,7 +3062,7 @@
     <!-- http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Swim -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Swim">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#LocomotionSound"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#MovementSound"/>
     </owl:Class>
     
 
@@ -3165,7 +3162,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3376,13 +3373,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Step"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3518,6 +3509,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Wobble">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#MovementSound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#hasMechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Vibrate"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4734,7 +4731,7 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Hand"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Head"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Heart"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Legs"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Leg"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Mouth"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Nose"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Stomach"/>
