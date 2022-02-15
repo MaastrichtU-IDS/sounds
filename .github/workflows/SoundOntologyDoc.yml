@@ -50,7 +50,7 @@ jobs:
         cp templates/description-en.html docs/lode/sections/description-en.html
         cp templates/references-en.html docs/lode/sections/references-en.html
         git fetch
-        git checkout gh-pages
+        git checkout --orphan gh-pages
         # Remove all directory and files but docs
         rm -rf browse tree graph lode templates .github *.jar
         mv docs/* .
