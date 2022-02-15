@@ -1,4 +1,4 @@
-name: Generate SoundOntology documentation
+name: Generate Sounds ontology documentation
 on:
   workflow_dispatch:
   push:
@@ -58,7 +58,12 @@ jobs:
         mv lode/* .
         mv index-en.html index.html
         find . -type f -exec sed -i "s/index-en\.html/index.html/g" {} +
-        ls -alh
+        find . -type f -exec sed -i "s/\[Ontology Name\]/Sounds/g" {} +
+        find . -type f -exec sed -i "s/\[Ontology NS Prefix\]/sounds/g" {} +
+
+        sed -i 's/<\/dl>/\n<dt>Evaluation:<\/dt><dd><a href="OOPSevaluation\/oopsEval.html#" target="_blank"><img src="https:\/\/img.shields.io\/badge\/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" \/><\/a><\/dd>\n<\/dl>/g' index.html
+        sed -i 's/http:\/\/insertlicenseURIhere.org/https:\/\/github.com\/MaastrichtU-IDS\/sounds\/blob\/main\/LICENSE/g' index.html
+        sed -i 's/license%20name%20goes%20here/MIT/g' index.html
         git add .
         git commit -m "Automatically generate documentation from SoundOntology OWL ontology file using Ontospy and Widoco (lode)."
         git push || exit 0
