@@ -1,0 +1,1783 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="static/libs/img/favicon.ico">
+
+	
+		<title>Ontospy > http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyV3</title>
+	
+
+    <!-- Bootstrap core CSS -->
+    <!-- <link href="static/libs/bootstrap-3_3_7-dist/css/bootstrap.min.css" rel="stylesheet">  -->
+    <!-- Bootswatch:  -->
+    <!-- cerulean  | cyborg |  flatly |  lumen |  sandstone |   spacelab  |  yeti | cosmo |  darkly |  paper | simplex | superhero |  journal | readable  |   slate |  united -->
+    <link href="static/libs/bootswatch3_2/simplex/bootstrap.min.css" rel="stylesheet">
+    <link href="static/custom/css/simple-sidebar.css" rel="stylesheet">
+    <link href="static/custom/css/familytree.css" rel="stylesheet">
+    <link href="static/custom/css/tabletree.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="static/libs/bootstrap-3_3_7-dist/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/custom/css/sticky-footer-navbar.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style type="text/css">
+
+  .lead-plus {font-size: 26.5px;}
+  .label-xs {font-size: 10px;}
+  .label-dark {background: #2c3e50; color: white; padding: 1px;}
+  .margin50 {margin-top: 50px; margin-bottom: 50px;}
+
+  .namespaces {background: #ced2d6; width: 100%;}
+
+
+  /*so that the d3plus tooltip panel doesnt cover the top banner*/
+  .navbar {z-index: 3000;}
+
+
+  .panel-body dt {margin-top: 5px;}
+  .page-header  {margin-top: 30px;}
+  #wrapper {margin-top: 50px;}
+
+  .implementation-panel {
+    overflow: auto;
+    /*max-height: 500px;*/
+  }
+
+  tr.table-classproperties {
+      /*background: #f5f5f5;*/
+  }
+  tr.table-classproperties th {
+      font-size: 80%;
+      font-weight: normal;
+  }
+
+
+  tr.table-inheritanceinfo {
+      /*background: #f5f5f5;*/
+      text-align: left;
+  }
+
+  tr.table-inheritanceinfo th {
+      font-size: 90%;
+      font-weight: normal;
+  }
+
+
+  .breadcrumb {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .breadcrumb a {
+      text-transform: capitalize;
+  }
+  .breadcrumb li {
+      text-transform: none;
+      /*so to catch the uri @todo improve*/
+  }
+
+
+  .fromclass_link {
+    /*color: white;
+    text-decoration: underline;*/
+    /*background: #1c1e52;*/
+    color: inherit;
+    /*padding: 1px;*/
+  }
+
+		.mythumbnail {
+			display: block;
+			padding: 13px;
+			margin-bottom: 30px;
+			line-height: 13.428571;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 30px;
+		}
+
+		.mythumbnail:hover {
+			background: lightyellow;
+			text-decoration: none;
+		}
+
+
+		.img-container{
+		    height:100%;
+			overflow: hidden;
+		    max-height:200px;
+			padding: 10px;
+/*			margin: 20px 0px 20px 0px;*/
+			border: 1em #EAE5E5 solid;
+		}
+
+		.img-container:hover {
+			border: 1px grey solid;
+		}
+
+		img{
+/*		    height:100% !important;*/
+		}
+
+
+		.icon-xxs {
+			font-size: 15px;
+		}
+
+
+    /* dropdown open on hover */
+
+    @media (min-width: 979px) {
+      ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+      }
+    }
+
+
+
+/*pygments css*/
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+
+/*overloading this class from pygments*/
+.highlight {
+  overflow: auto;
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+  </head>
+
+  <body>
+
+
+
+    
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <a class="navbar-brand" id="menu-toggle" title="Toggle sidebar">
+        
+        <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li ><a href="index.html"><code style="font-size: 115%;">http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyV3</code></a></li>
+
+        <li  ><a href="entities-az.html">Entities A-Z</a></li>
+        
+        <li ><a href="entities-tree-classes.html">Classes</a></li>
+        
+        
+        <li ><a href="entities-tree-properties.html">Properties</a></li>
+        
+        
+        
+        
+        <li  ><a href="statistics.html">Statistics</a></li>
+
+
+
+
+
+      </ul>
+      
+    </div><!--/.nav-collapse -->
+
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+<div id="wrapper" class="toggled">
+
+
+    
+
+    
+        
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+
+
+        <li>
+          <input style="margin-top: 30px;  margin-bottom: 20px;" type="text" id="search-input-sidebar" name="" value="" placeholder="Type to search">
+        </li>
+
+        
+          <li class="-second-level" id="sd_classes"><a href="entities-tree-classes.html">Classes (398)</a>
+          </li>
+
+            
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_10"><a  href="class-soundontologycleanabrade.html">Abrade</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_11"><a  href="class-soundontologycleanaccelerate.html">Accelerate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_12"><a  href="class-soundontologycleanacceleration.html">Acceleration</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_13"><a  href="class-soundontologycleanaccident.html">Accident</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_14"><a  href="class-soundontologycleanaerodynamics.html">AeroDynamics</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_15"><a  href="class-soundontologycleanairintube.html">AirInTube</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_16"><a  href="class-soundontologycleanalert.html">Alert</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_17"><a  href="class-soundontologycleananimate.html">Animate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_18"><a  href="class-soundontologycleananus.html">Anus</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_19"><a  href="class-soundontologycleanapplaud.html">Applaud</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_20"><a  href="class-soundontologycleanapproach.html">Approach</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_21"><a  href="class-soundontologycleanarm.html">Arm</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_22"><a  href="class-soundontologycleanarrive.html">Arrive</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_23"><a  href="class-soundontologycleanascend.html">Ascend</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_24"><a  href="class-soundontologycleanbabble.html">Babble</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_25"><a  href="class-soundontologycleanbag.html">Bag</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_26"><a  href="class-soundontologycleanbang.html">Bang</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_27"><a  href="class-soundontologycleanbark.html">Bark</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_28"><a  href="class-soundontologycleanbattle.html">Battle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_29"><a  href="class-soundontologycleanbeat.html">Beat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_30"><a  href="class-soundontologycleanbelch.html">Belch</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_31"><a  href="class-soundontologycleanbellow.html">Bellow</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_32"><a  href="class-soundontologycleanbend.html">Bend</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_33"><a  href="class-soundontologycleanbike.html">Bike</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_34"><a  href="class-soundontologycleanbleat.html">Bleat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_35"><a  href="class-soundontologycleanblow_wind.html">Blow_Wind</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_36"><a  href="class-soundontologycleanbodilyfunctionsound.html">BodilyFunctionSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_37"><a  href="class-soundontologycleanbodypart.html">BodyPart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_38"><a  href="class-soundontologycleanboing.html">Boing</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_39"><a  href="class-soundontologycleanbone.html">Bone</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_40"><a  href="class-soundontologycleanboo.html">Boo</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_41"><a  href="class-soundontologycleanbounce.html">Bounce</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_42"><a  href="class-soundontologycleanbowl.html">Bowl</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_43"><a  href="class-soundontologycleanbox.html">Box</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_44"><a  href="class-soundontologycleanbrake.html">Brake</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_45"><a  href="class-soundontologycleanbreak.html">Break</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_46"><a  href="class-soundontologycleanbreathe.html">Breathe</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_47"><a  href="class-soundontologycleanbuild.html">Build</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_48"><a  href="class-soundontologycleanbump.html">Bump</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_49"><a  href="class-soundontologycleanburn.html">Burn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_50"><a  href="class-soundontologycleanburp.html">Burp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_51"><a  href="class-soundontologycleanbutt.html">Butt</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_52"><a  href="class-soundontologycleanbuzz.html">Buzz</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_53"><a  href="class-soundontologycleancall.html">Call</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_54"><a  href="class-soundontologycleancatch.html">Catch</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_55"><a  href="class-soundontologycleancaw.html">Caw</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_56"><a  href="class-soundontologycleanchant.html">Chant</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_57"><a  href="class-soundontologycleancharge.html">Charge</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_58"><a  href="class-soundontologycleanchatter.html">Chatter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_59"><a  href="class-soundontologycleancheer.html">Cheer</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_60"><a  href="class-soundontologycleanchest.html">Chest</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_61"><a  href="class-soundontologycleanchirp.html">Chirp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_62"><a  href="class-soundontologycleanchop.html">Chop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_63"><a  href="class-soundontologycleanchuckle.html">Chuckle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_64"><a  href="class-soundontologycleanclack.html">Clack</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_65"><a  href="class-soundontologycleanclang.html">Clang</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_66"><a  href="class-soundontologycleanclank.html">Clank</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_67"><a  href="class-soundontologycleanclatter.html">Clatter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_68"><a  href="class-soundontologycleanclop.html">Clop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_69"><a  href="class-soundontologycleanclose.html">Close</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_70"><a  href="class-soundontologycleanclothing.html">Clothing</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_71"><a  href="class-soundontologycleancluck.html">Cluck</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_72"><a  href="class-soundontologycleanclunk.html">Clunk</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_73"><a  href="class-soundontologycleancollectivehumanaction.html">CollectiveHumanAction</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_74"><a  href="class-soundontologycleancollision.html">Collision</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_75"><a  href="class-soundontologycleancomplexaction.html">ComplexAction</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_76"><a  href="class-soundontologycleancontact.html">Contact</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_77"><a  href="class-soundontologycleanconversation.html">Conversation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_78"><a  href="class-soundontologycleancoo_croak.html">Coo_Croak</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_79"><a  href="class-soundontologycleancough.html">Cough</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_80"><a  href="class-soundontologycleancrack.html">Crack</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_81"><a  href="class-soundontologycleancrackle.html">Crackle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_82"><a  href="class-soundontologycleancrash.html">Crash</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_83"><a  href="class-soundontologycleancreak.html">Creak</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_84"><a  href="class-soundontologycleancrumple.html">Crumple</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_85"><a  href="class-soundontologycleancrunch.html">Crunch</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_86"><a  href="class-soundontologycleancrying.html">Crying</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_87"><a  href="class-soundontologycleancut.html">Cut</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_88"><a  href="class-soundontologycleandance.html">Dance</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_89"><a  href="class-soundontologycleandeformation.html">Deformation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_90"><a  href="class-soundontologycleandemolition.html">Demolition</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_91"><a  href="class-soundontologycleandestruction.html">Destruction</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_92"><a  href="class-soundontologycleandial.html">Dial</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_93"><a  href="class-soundontologycleandisaster.html">Disaster</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_94"><a  href="class-soundontologycleandive.html">Dive</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_95"><a  href="class-soundontologycleandodge.html">Dodge</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_96"><a  href="class-soundontologycleandraga.html">Draga</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_97"><a  href="class-soundontologycleandrink.html">Drink</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_98"><a  href="class-soundontologycleandrip.html">Drip</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_99"><a  href="class-soundontologycleandrive.html">Drive</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_100"><a  href="class-soundontologycleandrop.html">Drop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_101"><a  href="class-soundontologycleaneat.html">Eat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_102"><a  href="class-soundontologycleanenter.html">Enter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_103"><a  href="class-soundontologycleanexercise.html">Exercise</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_104"><a  href="class-soundontologycleanexhale.html">Exhale</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_105"><a  href="class-soundontologycleanexplosive.html">Explosive</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_106"><a  href="class-soundontologycleanfall.html">Fall</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_107"><a  href="class-soundontologycleanfart.html">Fart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_108"><a  href="class-soundontologycleanfight.html">Fight</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_109"><a  href="class-soundontologycleanfill.html">Fill</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_110"><a  href="class-soundontologycleanfinger.html">Finger</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_111"><a  href="class-soundontologycleanfish.html">Fish</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_112"><a  href="class-soundontologycleanflap.html">Flap</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_113"><a  href="class-soundontologycleanflight.html">Flight</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_114"><a  href="class-soundontologycleanfloor.html">Floor</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_115"><a  href="class-soundontologycleanfluiddynamics.html">FluidDynamics</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_116"><a  href="class-soundontologycleanflush.html">Flush</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_117"><a  href="class-soundontologycleanflutter.html">Flutter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_118"><a  href="class-soundontologycleanfly.html">Fly</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_119"><a  href="class-soundontologycleanfly_planes.html">Fly_planes</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_120"><a  href="class-soundontologycleanfoot.html">Foot</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_121"><a  href="class-soundontologycleanfootstep.html">Footstep</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_122"><a  href="class-soundontologycleanfreeze.html">Freeze</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_123"><a  href="class-soundontologycleanfriction.html">Friction</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_124"><a  href="class-soundontologycleangallop.html">Gallop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_125"><a  href="class-soundontologycleangas.html">Gas</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_126"><a  href="class-soundontologycleangasp.html">Gasp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_127"><a  href="class-soundontologycleangender.html">Gender</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_128"><a  href="class-soundontologycleangiggle.html">Giggle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_129"><a  href="class-soundontologycleangloves.html">Gloves</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_130"><a  href="class-soundontologycleangobble.html">Gobble</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_131"><a  href="class-soundontologycleangrind.html">Grind</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_132"><a  href="class-soundontologycleangroan.html">Groan</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_133"><a  href="class-soundontologycleangrowl.html">Growl</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_134"><a  href="class-soundontologycleangrumble.html">Grumble</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_135"><a  href="class-soundontologycleangrunt.html">Grunt</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_136"><a  href="class-soundontologycleangurgle.html">Gurgle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_137"><a  href="class-soundontologycleanhair.html">Hair</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_138"><a  href="class-soundontologycleanhand.html">Hand</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_139"><a  href="class-soundontologycleanhang.html">Hang</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_140"><a  href="class-soundontologycleanhead.html">Head</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_141"><a  href="class-soundontologycleanheart.html">Heart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_142"><a  href="class-soundontologycleanhiccup.html">Hiccup</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_143"><a  href="class-soundontologycleanhiss.html">Hiss</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_144"><a  href="class-soundontologycleanhit.html">Hit</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_145"><a  href="class-soundontologycleanholler.html">Holler</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_146"><a  href="class-soundontologycleanhoot.html">Hoot</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_147"><a  href="class-soundontologycleanhop.html">Hop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_148"><a  href="class-soundontologycleanhover.html">Hover</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_149"><a  href="class-soundontologycleanhowl.html">Howl</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_150"><a  href="class-soundontologycleanhum.html">Hum</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_151"><a  href="class-soundontologycleanhybriddynamics.html">HybridDynamics</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_152"><a  href="class-soundontologycleanimpact.html">Impact</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_153"><a  href="class-soundontologycleaninteractionwithobject.html">InteractionWithObject</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_154"><a  href="class-soundontologycleanjump.html">Jump</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_155"><a  href="class-soundontologycleankick.html">Kick</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_156"><a  href="class-soundontologycleanknock.html">Knock</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_157"><a  href="class-soundontologycleanlaugh.html">Laugh</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_158"><a  href="class-soundontologycleanleg.html">Leg</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_159"><a  href="class-soundontologycleanlift.html">Lift</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_160"><a  href="class-soundontologycleanliquid.html">Liquid</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_161"><a  href="class-soundontologycleanliquidsolid.html">LiquidSolid</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_162"><a  href="class-soundontologycleanload.html">Load</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_163"><a  href="class-soundontologycleanlocomotionsound.html">LocomotionSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_164"><a  href="class-soundontologycleanmarch.html">March</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_165"><a  href="class-soundontologycleanmaterial.html">Material</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_166"><a  href="class-soundontologycleanmelody.html">Melody</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_167"><a  href="class-soundontologycleanmeow.html">Meow</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_168"><a  href="class-soundontologycleanmoan.html">Moan</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_169"><a  href="class-soundontologycleanmoo.html">Moo</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_170"><a  href="class-soundontologycleanmouth.html">Mouth</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_171"><a  href="class-soundontologycleanmove.html">Move</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_172"><a  href="class-soundontologycleanmovementsound.html">MovementSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_173"><a  href="class-soundontologycleanmuffle.html">Muffle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_174"><a  href="class-soundontologycleanmurmur.html">Murmur</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_175"><a  href="class-soundontologycleanneigh.html">Neigh</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_176"><a  href="class-soundontologycleannicker.html">Nicker</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_177"><a  href="class-soundontologycleannonanimate.html">NonAnimate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_178"><a  href="class-soundontologycleannonspeech.html">NonSpeech</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_179"><a  href="class-soundontologycleannose.html">Nose</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_180"><a  href="class-soundontologycleanopen.html">Open</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_181"><a  href="class-soundontologycleanovation.html">Ovation</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_182"><a  href="class-soundontologycleanpant.html">Pant</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_183"><a  href="class-soundontologycleanpart.html">Part</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_184"><a  href="class-soundontologycleanpass.html">Pass</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_185"><a  href="class-soundontologycleanpattern.html">Pattern</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_186"><a  href="class-soundontologycleanpeel.html">Peel</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_187"><a  href="class-soundontologycleanperformance.html">Performance</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_188"><a  href="class-soundontologycleanpick.html">Pick</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_189"><a  href="class-soundontologycleanpierce.html">Pierce</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_190"><a  href="class-soundontologycleanplop.html">Plop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_191"><a  href="class-soundontologycleanpluck.html">Pluck</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_192"><a  href="class-soundontologycleanplunk.html">Plunk</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_193"><a  href="class-soundontologycleanpound.html">Pound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_194"><a  href="class-soundontologycleanpour.html">Pour</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_195"><a  href="class-soundontologycleanpull.html">Pull</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_196"><a  href="class-soundontologycleanpulsate.html">Pulsate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_197"><a  href="class-soundontologycleanpunch.html">Punch</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_198"><a  href="class-soundontologycleanpunchingglove.html">PunchingGlove</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_199"><a  href="class-soundontologycleanpurr.html">Purr</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_200"><a  href="class-soundontologycleanpush.html">Push</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_201"><a  href="class-soundontologycleanquack.html">Quack</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_202"><a  href="class-soundontologycleanrasp.html">Rasp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_203"><a  href="class-soundontologycleanrattle.html">Rattle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_204"><a  href="class-soundontologycleanreel.html">Reel</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_205"><a  href="class-soundontologycleanrelease.html">Release</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_206"><a  href="class-soundontologycleanremove.html">Remove</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_207"><a  href="class-soundontologycleanreplace.html">Replace</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_208"><a  href="class-soundontologycleanrespirate.html">Respirate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_209"><a  href="class-soundontologycleanride.html">Ride</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_210"><a  href="class-soundontologycleanrip.html">Rip</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_211"><a  href="class-soundontologycleanripple.html">Ripple</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_212"><a  href="class-soundontologycleanroar.html">Roar</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_213"><a  href="class-soundontologycleanroll.html">Roll</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_214"><a  href="class-soundontologycleanrub.html">Rub</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_215"><a  href="class-soundontologycleanrumble.html">Rumble</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_216"><a  href="class-soundontologycleanrun.html">Run</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_217"><a  href="class-soundontologycleanscrape.html">Scrape</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_218"><a  href="class-soundontologycleanscratch.html">Scratch</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_219"><a  href="class-soundontologycleanscream.html">Scream</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_220"><a  href="class-soundontologycleanscreech.html">Screech</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_221"><a  href="class-soundontologycleanscrew.html">Screw</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_222"><a  href="class-soundontologycleanscruff.html">Scruff</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_223"><a  href="class-soundontologycleanshake.html">Shake</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_224"><a  href="class-soundontologycleanshatter.html">Shatter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_225"><a  href="class-soundontologycleanshift.html">Shift</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_226"><a  href="class-soundontologycleanshout.html">Shout</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_227"><a  href="class-soundontologycleanshriek.html">Shriek</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_228"><a  href="class-soundontologycleanshuffle.html">Shuffle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_229"><a  href="class-soundontologycleanshut.html">Shut</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_230"><a  href="class-soundontologycleansigh.html">Sigh</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_231"><a  href="class-soundontologycleansing.html">Sing</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_232"><a  href="class-soundontologycleansit.html">Sit</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_233"><a  href="class-soundontologycleanski.html">Ski</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_234"><a  href="class-soundontologycleanskid.html">Skid</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_235"><a  href="class-soundontologycleanslam.html">Slam</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_236"><a  href="class-soundontologycleanslap.html">Slap</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_237"><a  href="class-soundontologycleanslow.html">Slow</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_238"><a  href="class-soundontologycleanslow_down.html">Slow_down</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_239"><a  href="class-soundontologycleansmack.html">Smack</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_240"><a  href="class-soundontologycleansmash.html">Smash</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_241"><a  href="class-soundontologycleansnap.html">Snap</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_242"><a  href="class-soundontologycleansneeze.html">Sneeze</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_243"><a  href="class-soundontologycleansnicker.html">Snicker</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_244"><a  href="class-soundontologycleansniff.html">Sniff</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_245"><a  href="class-soundontologycleansnore.html">Snore</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_246"><a  href="class-soundontologycleansnort.html">Snort</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_247"><a  href="class-soundontologycleansobbing.html">Sobbing</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_248"><a  href="class-soundontologycleansolid.html">Solid</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_249"><a  href="class-soundontologycleansong.html">Song</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_250"><a  href="class-soundontologycleansound.html">Sound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_251"><a  href="class-soundontologycleansoundacoustics.html">SoundAcoustics</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_252"><a  href="class-soundontologycleansoundcontext.html">SoundContext</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_253"><a  href="class-soundontologycleansoundmechanism.html">SoundMechanism</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_254"><a  href="class-soundontologycleansoundrecurrence.html">SoundRecurrence</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_255"><a  href="class-soundontologycleansoundregularity.html">SoundRegularity</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_256"><a  href="class-soundontologycleansoundsource.html">SoundSource</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_257"><a  href="class-soundontologycleanspatter.html">Spatter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_258"><a  href="class-soundontologycleanspeech.html">Speech</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_259"><a  href="class-soundontologycleanspell.html">Spell</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_260"><a  href="class-soundontologycleanspin.html">Spin</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_261"><a  href="class-soundontologycleanspit.html">Spit</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_262"><a  href="class-soundontologycleansplash.html">Splash</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_263"><a  href="class-soundontologycleansplatter.html">Splatter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_264"><a  href="class-soundontologycleansplosh.html">Splosh</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_265"><a  href="class-soundontologycleansquak.html">Squak</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_266"><a  href="class-soundontologycleansqueal.html">Squeal</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_267"><a  href="class-soundontologycleansquish.html">Squish</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_268"><a  href="class-soundontologycleanstand.html">Stand</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_269"><a  href="class-soundontologycleanstart.html">Start</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_270"><a  href="class-soundontologycleanstep.html">Step</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_271"><a  href="class-soundontologycleanstomach.html">Stomach</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_272"><a  href="class-soundontologycleanstomp.html">Stomp</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_273"><a  href="class-soundontologycleanstop.html">Stop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_274"><a  href="class-soundontologycleanstrike.html">Strike</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_275"><a  href="class-soundontologycleansuck.html">Suck</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_276"><a  href="class-soundontologycleansurf.html">Surf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_277"><a  href="class-soundontologycleanswim.html">Swim</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_278"><a  href="class-soundontologycleanswitch.html">Switch</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_279"><a  href="class-soundontologycleantalk.html">Talk</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_280"><a  href="class-soundontologycleantap.html">Tap</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_281"><a  href="class-soundontologycleantear.html">Tear</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_282"><a  href="class-soundontologycleanthink.html">Think</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_283"><a  href="class-soundontologycleanthroat.html">Throat</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_284"><a  href="class-soundontologycleanthrow.html">Throw</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_285"><a  href="class-soundontologycleanthud.html">Thud</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_286"><a  href="class-soundontologycleanthump.html">Thump</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_287"><a  href="class-soundontologycleanthwack.html">Thwack</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_288"><a  href="class-soundontologycleantooth.html">Tooth</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_289"><a  href="class-soundontologycleantrot.html">Trot</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_290"><a  href="class-soundontologycleantrunk.html">Trunk</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_291"><a  href="class-soundontologycleanturn.html">Turn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_292"><a  href="class-soundontologycleantwang.html">Twang</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_293"><a  href="class-soundontologycleantweet.html">Tweet</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_294"><a  href="class-soundontologycleantwist.html">Twist</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_295"><a  href="class-soundontologycleantwitter.html">Twitter</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_296"><a  href="class-soundontologycleanunlock.html">Unlock</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_297"><a  href="class-soundontologycleanuse.html">Use</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_298"><a  href="class-soundontologycleanvehicle.html">Vehicle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_299"><a  href="class-soundontologycleanvehiclemovementsound.html">VehicleMovementSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_300"><a  href="class-soundontologycleanvehiclepart.html">VehiclePart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_301"><a  href="class-soundontologycleanvibrate.html">Vibrate</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_302"><a  href="class-soundontologycleanvibratingsolids.html">VibratingSolids</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_303"><a  href="class-soundontologycleanvocalcord.html">VocalCord</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_304"><a  href="class-soundontologycleanvocalsound.html">VocalSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_305"><a  href="class-soundontologycleanvocalize.html">Vocalize</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_306"><a  href="class-soundontologycleanwail.html">Wail</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_307"><a  href="class-soundontologycleanwalk.html">Walk</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_308"><a  href="class-soundontologycleanwar.html">War</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_309"><a  href="class-soundontologycleanwarble.html">Warble</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_310"><a  href="class-soundontologycleanwarn.html">Warn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_311"><a  href="class-soundontologycleanwash.html">Wash</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_312"><a  href="class-soundontologycleanwhack.html">Whack</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_313"><a  href="class-soundontologycleanwheeze.html">Wheeze</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_314"><a  href="class-soundontologycleanwhimpering.html">Whimpering</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_315"><a  href="class-soundontologycleanwhine.html">Whine</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_316"><a  href="class-soundontologycleanwhisper.html">Whisper</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_317"><a  href="class-soundontologycleanwhoosh.html">Whoosh</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_318"><a  href="class-soundontologycleanwind.html">Wind</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_319"><a  href="class-soundontologycleanwing.html">Wing</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_320"><a  href="class-soundontologycleanwobble.html">Wobble</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_321"><a  href="class-soundontologycleanwreck.html">Wreck</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_322"><a  href="class-soundontologycleanwrestle.html">Wrestle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_323"><a  href="class-soundontologycleanyawn.html">Yawn</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_324"><a  href="class-soundontologycleanyell.html">Yell</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_325"><a  href="class-soundontologycleanyip.html">Yip</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_2"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyanimal.html">Animal</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_3"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologybaby.html">Baby</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_4"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologychild.html">Child</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_5"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyinfant.html">Infant</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_6"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologykid.html">Kid</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_7"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyman.html">Man</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_8"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyperson.html">Person</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_9"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologywoman.html">Woman</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_326"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3air.html">Air</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_327"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3aluminium.html">Aluminium</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_328"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3asphalt.html">Asphalt</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_329"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3attributes.html">Attributes</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_330"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3beer.html">Beer</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_331"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3blast.html">Blast</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_332"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3blow_impact.html">Blow_Impact</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_333"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3blowout.html">Blowout</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_334"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3blust.html">Blust</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_335"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3boom.html">Boom</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_336"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3bubble.html">Bubble</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_337"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3burst.html">Burst</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_338"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3car.html">Car</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_339"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3carkey.html">CarKey</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_340"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3cement.html">Cement</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_341"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3cementfloor.html">CementFloor</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_342"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3ceramic.html">Ceramic</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_343"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3clapsound.html">ClapSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_344"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3coffee.html">Coffee</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_345"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3cream.html">Cream</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_346"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3crystal.html">Crystal</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_347"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3dressshoes.html">DressShoes</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_348"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3empty.html">Empty</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_349"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3eruption.html">Eruption</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_350"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3exhaust.html">Exhaust</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_351"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3explode.html">Explode</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_352"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3explosion.html">Explosion</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_353"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3female.html">Female</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_354"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3foodintakesound.html">FoodIntakeSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_355"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3full.html">Full</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_356"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3fusillade.html">Fusillade</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_357"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3guncasing.html">GunCasing</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_358"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3gunfire.html">Gunfire</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_359"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3gunshot.html">Gunshot</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_360"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3gusts.html">Gusts</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_361"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3hardwood.html">Hardwood</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_362"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3ice.html">Ice</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_363"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3ignite.html">Ignite</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_364"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3ignition.html">Ignition</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_365"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3leather.html">Leather</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_366"><a class="active" href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3linoleum.html">Linoleum</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_367"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3lung.html">Lung</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_368"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3male.html">Male</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_369"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3metal.html">Metal</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_370"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3nissansentra.html">NissanSentra</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_371"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3plastic.html">Plastic</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_372"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3pop.html">Pop</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_373"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3puff.html">Puff</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_374"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3recurringsound.html">RecurringSound</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_375"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3ricochet.html">Ricochet</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_376"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3rubber.html">Rubber</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_377"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3rustle.html">Rustle</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_378"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3sand.html">Sand</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_379"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3shoes.html">Shoes</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_380"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3shoot.html">Shoot</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_381"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3shoot_bow.html">Shoot_(Bow)</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_382"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3shoot_rifle.html">Shoot_(Rifle)</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_383"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3shot.html">Shot</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_384"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3singleclap.html">SingleClap</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_385"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3smoke.html">Smoke</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_386"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3snow.html">Snow</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_387"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3spark.html">Spark</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_388"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3start.html">Start</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_389"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3steam.html">Steam</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_390"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3steel.html">Steel</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_391"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3styrofoam.html">Styrofoam</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_392"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3swing.html">Swing</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_393"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3water.html">Water</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_394"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3whip.html">Whip</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_395"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3whirl.html">Whirl</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_396"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3wine.html">Wine</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_397"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3wingsounds.html">WingSounds</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_398"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3wood.html">Wood</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_399"><a  href="class-httpwwwsemanticweborgmartinontologies20220soundontologyv3zap.html">Zap</a></li>
+          
+        
+
+        
+            <li class="-second-level" id="sd_properties"><a  href="entities-tree-properties.html">Properties (19)</a>
+            </li>
+
+            
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_401"><a   href="prop-soundontologycleanhasacoustics.html">hasAcoustics</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_400"><a   href="prop-soundontologycleanhasage.html">hasAge</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_402"><a   href="prop-soundontologycleanhasbodypart.html">hasBodyPart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_403"><a   href="prop-soundontologycleanhascontext.html">hasContext</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_404"><a   href="prop-soundontologycleanhasmaterial.html">hasMaterial</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_405"><a   href="prop-soundontologycleanhasmechanism.html">hasMechanism</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_406"><a   href="prop-soundontologycleanhaspart.html">hasPart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_407"><a   href="prop-soundontologycleanhasvehiclepart.html">hasVehiclePart</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_408"><a   href="prop-soundontologycleanisacousticsof.html">isAcousticsOf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_409"><a   href="prop-soundontologycleanisbodypartof.html">isBodyPartOf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_410"><a   href="prop-soundontologycleaniscontextof.html">isContextOf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_411"><a   href="prop-soundontologycleanismaterialof.html">isMaterialOf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_412"><a   href="prop-soundontologycleanismechanismof.html">isMechanismOf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_413"><a   href="prop-soundontologycleanispartof.html">isPartOf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_414"><a   href="prop-soundontologycleanisvehiclepartof.html">isVehiclePartOf</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_415"><a   href="prop-soundontologycleanproducedby.html">producedBy</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_416"><a   href="prop-soundontologycleanproduces.html">produces</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_417"><a   href="prop-httpwwwsemanticweborgmartinontologies20220soundontologyv3hasattribute.html">hasAttribute</a></li>
+          
+              <li class="second-level" style="line-height: 20px;" id="sd_418"><a   href="prop-httpwwwsemanticweborgmartinontologies20220soundontologyv3isattributeof.html">isAttributeOf</a></li>
+          
+
+        
+
+        
+
+
+        
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+    </ul>
+
+</div>
+
+
+<!-- /#sidebar-wrapper -->
+
+    
+
+
+
+
+    <!-- Begin page content -->
+    <div class="container" id="page-content-wrapper">
+
+      
+
+	
+
+
+
+
+
+
+        
+
+
+
+
+        
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <ol class="breadcrumb">
+    <li>
+      <a href="index.html">Home</a>
+    </li>
+    <li>
+          <a href="entities-az.html">Entities</a>
+    </li>
+    <li>
+          <a href="entities-tree-classes.html">Classes</a>
+    </li>
+      <li class="active">
+            Linoleum
+        </li>
+  </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+            <h1>
+
+                Linoleum
+                
+                    <small class="label label-info label-xs">leaf node</small>
+                  
+
+            </h1>
+            <hr>
+
+
+
+            <div class="tree-container">
+            <div class="tree">
+                <ul>
+                    
+
+                        
+
+                        <li>
+
+                          <a href="class-soundontologycleansolid.html" title="'Solid'">Solid</a>
+
+                          <ul>
+
+                            <li><a style="font-weight: bold;" title="'Linoleum'">Linoleum</a>
+                            
+                              </li>
+
+                          </ul>
+
+                          </li>
+                        
+
+                    
+
+                </ul>
+            </div>
+            </div>
+
+
+
+
+           <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">URI</h3>
+            </div>
+            <div class="panel-body">
+
+                <code>http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyV3#Linoleum</code>
+            </div>
+          </div>
+           </div></div>
+
+           
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Label</h3>
+            </div>
+            <div class="panel-body">
+
+                Linoleum
+            </div>
+          </div>
+           </div></div>
+           
+
+
+
+           
+
+
+
+
+           
+            <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Superclasses (2)</h3>
+            </div>
+            <div class="panel-body">
+
+            
+                    <li><a href="class-soundontologycleansolid.html" title="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Solid">Solid</a></li><li><a href="class-soundontologycleanmaterial.html" title="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#Material">Material</a></li>
+            
+
+            </div>
+          </div>
+           </div></div>
+           
+
+
+
+          
+
+
+          
+
+
+         
+           <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Usage</h3>
+            </div>
+            <div class="panel-body" style="overflow: auto;">
+
+                <p>Instances of Linoleum can have the following properties:</p>
+            </div>
+             <table class="table table-bordered" style="overflow: auto;">
+
+                <tr class="table-classproperties">
+                    <th>PROPERTY</th><th>TYPE</th><th>DESCRIPTION</th><th>RANGE</th>
+                </tr>
+
+                
+
+                    
+
+                    
+
+                    
+
+                
+
+                    
+
+                    
+
+                        <tr class="table-inheritanceinfo">
+                            <th colspan="4" class="treeinfo"><span class="label label-default">From class <a title="owl:Thing" href="class-owlthing.html" class="fromclass_link">Thing</a></span>
+                            </th>
+                        </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:hasMaterial" href="prop-soundontologycleanhasmaterial.html">hasMaterial</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                    
+
+                                        
+                                          <a title="SoundOntologyClean:Material" href="class-soundontologycleanmaterial.html" class="rdfclass">Material</a>
+                                        
+
+
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:hasPart" href="prop-soundontologycleanhaspart.html">hasPart</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                    
+
+                                        
+                                          <a title="SoundOntologyClean:Part" href="class-soundontologycleanpart.html" class="rdfclass">Part</a>
+                                        
+
+
+                                    
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:isAcousticsOf" href="prop-soundontologycleanisacousticsof.html">isAcousticsOf</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:isContextOf" href="prop-soundontologycleaniscontextof.html">isContextOf</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:isMaterialOf" href="prop-soundontologycleanismaterialof.html">isMaterialOf</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:isMechanismOf" href="prop-soundontologycleanismechanismof.html">isMechanismOf</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:isPartOf" href="prop-soundontologycleanispartof.html">isPartOf</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:isVehiclePartOf" href="prop-soundontologycleanisvehiclepartof.html">isVehiclePartOf</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="SoundOntologyClean:produces" href="prop-soundontologycleanproduces.html">produces</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+                            <tr>
+                                <td class="firsttd">
+                                    <a class="propcolor" title="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyV3#isAttributeOf" href="prop-httpwwwsemanticweborgmartinontologies20220soundontologyv3isattributeof.html">isAttributeOf</a>
+                                </td>
+                                <td class="secondtd">
+                                    <i>owl:ObjectProperty<i>
+                                </td>
+                                <td class="thirdtd">
+                                    <span>--</span>
+                                </td>
+                                <td class="fourthtd">
+                                    
+                                        <i>owl:Thing</i>
+                                    
+                                </td>
+                            </tr>
+
+                            
+
+                    
+
+                    
+
+                
+
+            </table>
+
+
+          </div>
+           </div></div>
+
+        
+
+
+
+
+
+
+           <div class="row"><div class="col-md-12">
+              <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Implementation</h3>
+            </div>
+            <div class="panel-body implementation-panel">
+
+                
+
+                    <div class="highlight"><pre><span></span><span class="k">@prefix</span><span class="w"> </span><span class="nn">:</span><span class="w"> </span><span class="nv">&lt;http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">owl:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2002/07/owl#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+
+<span class="nv">&lt;http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyV3#Linoleum&gt;</span><span class="w"> </span><span class="kt">a</span><span class="w"> </span><span class="nn">owl:</span><span class="nt">Class</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nn">owl:</span><span class="nt">NamedIndividual</span><span class="w"> </span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="nn">rdfs:</span><span class="nt">subClassOf</span><span class="w"> </span><span class="nn">:</span><span class="nt">Solid</span><span class="w"> </span><span class="p">.</span><span class="w"></span>
+</pre></div>
+
+
+                
+            </div>
+          </div>
+           </div></div>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+	</div><!-- /#page-content-wrapper -->
+
+
+  
+
+
+
+  
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+    
+      <p class="text-muted">Documentation automatically generated on 15th February 2022 with <a href="http://lambdamusic.github.io/Ontospy/">Ontospy</a> (v1.9.9.4)</p>
+
+    
+    </div>
+  </footer>
+
+
+</div><!-- /#wrapper -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="static/libs/jquery/1_12_4/jquery.min.js"></script>
+<script src="static/libs/bootstrap-3_3_7-dist/js/bootstrap.min.js"></script>
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="static/libs/bootstrap-3_3_7-dist/js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="static/libs/chartjs-2_4_0/chart.bundle.js"></script>
+
+
+<!-- Menu Toggle Script -->
+<script>
+$("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+
+$('#search-input-sidebar').keyup(function() {
+
+  var val = $.trim($(this).val()).replace(/ +/g, ' ').toLowerCase();
+  // var $rows = $(this).next(".entities-list").find("div");
+  var $rows = $(this).parent().parent().find("li.second-level");
+
+  $rows.show().filter(function() {
+      var text = $(this).text().replace(/\s+/g, ' ').toLowerCase();
+      return !~text.indexOf(val);
+  }).hide();
+});
+
+</script>
+
+
+
+
+  <!-- Scroll Sidebar Script -->
+
+  
+  
+
+  <script type="text/javascript">
+
+    $(document).ready(function (){
+      $('#sidebar-wrapper').animate({
+          scrollTop: $("#sd_366").offset().top - 100
+      }, 100);
+    });
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
