@@ -4,10 +4,10 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'ontology/SoundOntologyV3.owl'
+    - 'ontology/sounds.owl'
     - '.github/workflows/SoundOntologyDoc.yml'
 env:
-  ONTOLOGY_FILE: ontology/SoundOntologyV3.owl
+  ONTOLOGY_FILE: ontology/sounds.owl
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
