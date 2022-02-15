@@ -52,7 +52,7 @@ jobs:
         git fetch
         git checkout gh-pages
         # Remove all directory and files but docs
-        rm -rf browse tree graph lode templates .github
+        rm -rf browse tree graph lode templates .github *.jar
         mv docs/* .
         rm -rf docs
         mv lode/* .
