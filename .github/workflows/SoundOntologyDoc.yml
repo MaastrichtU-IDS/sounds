@@ -50,10 +50,8 @@ jobs:
         cp templates/references-en.html docs/lode/sections/references-en.html
         git fetch
         git checkout gh-pages
-        # rm -rf browse tree graph lode templates .github
         # Remove all directory and files but docs
-        find . ! -name 'docs' -type d -exec rm -rf {} +
-        find . ! -name 'docs' -type f -exec rm -rf {} +
+        rm -rf browse tree graph lode templates .github
         mv docs/* .
         rm -rf docs
         mv lode/* .
