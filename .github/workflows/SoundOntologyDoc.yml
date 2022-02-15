@@ -55,7 +55,7 @@ jobs:
         find . ! -name 'docs' -type d -exec rm -rf {} +
         find . ! -name 'docs' -type f -exec rm -rf {} +
         mv docs/* .
-        rmdir -rf docs
+        rm -rf docs
         mv lode/* .
         mv index-en.html index.html
         find . -type f -exec sed -i "s/index-en\.html/index.html/g" {} +
