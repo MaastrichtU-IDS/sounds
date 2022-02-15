@@ -50,7 +50,7 @@ jobs:
         cp templates/references-en.html docs/lode/sections/references-en.html
         git fetch
         git checkout gh-pages
-        rm -rf browse tree graph lode templates .github
+        # rm -rf browse tree graph lode templates .github
         # Remove all directory and files but docs
         find . ! -name 'docs' -type d -exec rm -rf {} +
         find . ! -name 'docs' -type f -exec rm -rf {} +
@@ -60,9 +60,9 @@ jobs:
         mv index-en.html index.html
         find . -type f -exec sed -i "s/index-en\.html/index.html/g" {} +
         ls -alh
-        # git add .
-        # git commit -m "Automatically generate documentation from SoundOntology OWL ontology file using Ontospy and Widoco (lode)."
-        # git push || exit 0
+        git add .
+        git commit -m "Automatically generate documentation from SoundOntology OWL ontology file using Ontospy and Widoco (lode)."
+        git push || exit 0
     
     # - name: Hotfix graph nodes sizes in ontospy docs
     #   run: |
