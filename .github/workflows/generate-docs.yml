@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths:
     - 'ontology/sounds.owl'
-    - '.github/workflows/SoundOntologyDoc.yml'
+    - '.github/workflows/generate-docs.yml'
 env:
   ONTOLOGY_FILE: ontology/sounds.owl
 jobs:
