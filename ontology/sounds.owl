@@ -245,6 +245,15 @@
     
 
 
+    <!-- http://www.w3id.org/sounds/ontology/AbstractAction -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/AbstractAction">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Sound"/>
+        <rdfs:comment>Action class which has no SoundMechanism, as it is not directly, physically manifested</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/sounds/ontology/Accelerate -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Accelerate">
@@ -269,9 +278,9 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/AeroDynamics -->
+    <!-- http://www.w3id.org/sounds/ontology/AeroDynamic -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/AeroDynamics">
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/AeroDynamic">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -298,7 +307,7 @@
     <!-- http://www.w3id.org/sounds/ontology/AirInTube -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/AirInTube">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/AeroDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/AeroDynamic"/>
     </owl:Class>
     
 
@@ -457,7 +466,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Bag -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Bag">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
     </owl:Class>
     
@@ -490,7 +499,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Beat -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Beat">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -538,7 +547,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Bend -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Bend">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -554,7 +563,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Blast -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Blast">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -570,7 +579,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Blow_Impact -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Blow_Impact">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -578,7 +587,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Blow_Wind -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Blow_Wind">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Wind"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/WindSound"/>
     </owl:Class>
     
 
@@ -586,15 +595,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Blowout -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Blowout">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/ontology/Blust -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Blust">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -634,7 +635,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Boing -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Boing">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -659,7 +660,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Boom -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Boom">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -748,7 +749,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Bump -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Bump">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -788,7 +789,15 @@
     <!-- http://www.w3id.org/sounds/ontology/Burst -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Burst">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/sounds/ontology/Bust -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Bust">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -982,7 +991,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Chop -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Chop">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -1111,7 +1120,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Collision -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Collision">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -1127,7 +1136,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Contact -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Contact">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -1175,7 +1184,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Crack -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Crack">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -1183,7 +1192,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Crackle -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Crackle">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -1191,7 +1200,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Crash -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Crash">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/producedBy"/>
@@ -1205,7 +1214,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Creak -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Creak">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -1221,7 +1230,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Crumple -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Crumple">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -1291,7 +1300,26 @@
     <!-- http://www.w3id.org/sounds/ontology/Deformation -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Deformation">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolids"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/sounds/ontology/DeformationSound -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/DeformationSound">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Sound"/>
     </owl:Class>
     
 
@@ -1299,7 +1327,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Demolition -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Demolition">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -1307,7 +1335,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Destruction -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Destruction">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -1369,8 +1397,8 @@
     <!-- http://www.w3id.org/sounds/ontology/Drink -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Drink">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FoodIntakeSound"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/LiquidSound"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
@@ -1394,7 +1422,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Drip -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Drip">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamic"/>
     </owl:Class>
     
 
@@ -1478,10 +1506,10 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/Eruption -->
+    <!-- http://www.w3id.org/sounds/ontology/Erupt -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Eruption">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Erupt">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -1513,7 +1541,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Explode -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Explode">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -1521,15 +1549,26 @@
     <!-- http://www.w3id.org/sounds/ontology/Explosion -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Explosion">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/AeroDynamic"/>
     </owl:Class>
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/Explosive -->
+    <!-- http://www.w3id.org/sounds/ontology/ExplosiveSound -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Explosive">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/AeroDynamics"/>
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/ExplosiveSound">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Explosion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Sound"/>
     </owl:Class>
     
 
@@ -1603,7 +1642,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Fill -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Fill">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/LiquidSound"/>
     </owl:Class>
     
 
@@ -1648,9 +1687,9 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/FluidDynamics -->
+    <!-- http://www.w3id.org/sounds/ontology/FluidDynamic -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/FluidDynamics">
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/FluidDynamic">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -1669,7 +1708,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Flush -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Flush">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/LiquidSound"/>
     </owl:Class>
     
 
@@ -1733,7 +1772,26 @@
     <!-- http://www.w3id.org/sounds/ontology/Friction -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Friction">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolids"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/sounds/ontology/FrictionSound -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/FrictionSound">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Sound"/>
     </owl:Class>
     
 
@@ -1749,7 +1807,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Fusillade -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Fusillade">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -1828,8 +1886,8 @@
     <!-- http://www.w3id.org/sounds/ontology/Grind -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Grind">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -1866,10 +1924,18 @@
     
 
 
+    <!-- http://www.w3id.org/sounds/ontology/Gun -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Gun">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/NonAnimate"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/sounds/ontology/GunCasing -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/GunCasing">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/NonAnimate"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Gun"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMaterial"/>
@@ -1883,7 +1949,23 @@
     <!-- http://www.w3id.org/sounds/ontology/Gunfire -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Gunfire">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Explosion"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/producedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Gun"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1891,7 +1973,23 @@
     <!-- http://www.w3id.org/sounds/ontology/Gunshot -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Gunshot">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Explosion"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/producedBy"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Gun"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1923,7 +2021,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Gusts -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Gusts">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -2012,7 +2110,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Hit -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Hit">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -2065,9 +2163,9 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/HybridDynamics -->
+    <!-- http://www.w3id.org/sounds/ontology/HybridDynamic -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/HybridDynamics">
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/HybridDynamic">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2080,6 +2178,7 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:comment>Newly adapted and nuanced classification of sound mechanisms, including all interactions between the primary mechanism groups {AeroDynamics, FluidDynamics and VibratingSolids}, corresponding to interactions between the material states {Gas, Liquid, Solid}.</rdfs:comment>
     </owl:Class>
     
 
@@ -2095,7 +2194,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Ignite -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Ignite">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -2111,7 +2210,26 @@
     <!-- http://www.w3id.org/sounds/ontology/Impact -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Impact">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolids"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolid"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/sounds/ontology/ImpactSound -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/ImpactSound">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Sound"/>
     </owl:Class>
     
 
@@ -2180,7 +2298,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Knock -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Knock">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -2236,7 +2354,7 @@
     <!-- http://www.w3id.org/sounds/ontology/LiquidSolid -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/LiquidSolid">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/HybridDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/HybridDynamic"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2251,6 +2369,25 @@
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/sounds/ontology/LiquidSound -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/LiquidSound">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamic"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Sound"/>
     </owl:Class>
     
 
@@ -2510,7 +2647,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Peel -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Peel">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -2558,7 +2695,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Plop -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Plop">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/LiquidSolid"/>
     </owl:Class>
     
 
@@ -2582,7 +2719,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Pop -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Pop">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -2590,7 +2727,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Pound -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Pound">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -2598,7 +2735,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Pour -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Pour">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/LiquidSound"/>
     </owl:Class>
     
 
@@ -2606,7 +2743,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Puff -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Puff">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Wind"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/WindSound"/>
     </owl:Class>
     
 
@@ -2622,7 +2759,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Pulsate -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Pulsate">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/BodilyFunctionSound"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/MovementSound"/>
     </owl:Class>
     
@@ -2631,7 +2768,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Punch -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Punch">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -2677,7 +2814,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Rasp -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Rasp">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -2685,7 +2822,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Rattle -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Rattle">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -2780,7 +2917,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Ricochet -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Ricochet">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -2796,7 +2933,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Rip -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Rip">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -2804,7 +2941,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Ripple -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Ripple">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamic"/>
     </owl:Class>
     
 
@@ -2840,7 +2977,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Rub -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Rub">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/InteractionWithObject"/>
     </owl:Class>
     
@@ -2879,7 +3016,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Rustle -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Rustle">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Wind"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/WindSound"/>
     </owl:Class>
     
 
@@ -2895,7 +3032,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Scrape -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Scrape">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -2903,7 +3040,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Scratch -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Scratch">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -2935,7 +3072,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Scruff -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Scruff">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Friction"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FrictionSound"/>
     </owl:Class>
     
 
@@ -2951,7 +3088,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Shatter -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Shatter">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -2975,7 +3112,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Shoot -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Shoot">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -2983,7 +3120,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Shot -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Shot">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -3088,7 +3225,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Slam -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Slam">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -3096,7 +3233,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Slap -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Slap">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -3120,7 +3257,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Smack -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Smack">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -3128,7 +3265,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Smash -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Smash">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -3136,7 +3273,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Smoke -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Smoke">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Wind"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/WindSound"/>
     </owl:Class>
     
 
@@ -3287,7 +3424,9 @@
 
     <!-- http://www.w3id.org/sounds/ontology/Sound -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Sound"/>
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Sound">
+        <rdfs:comment>Sounds are defined as a specific action, which can be defined by a sound mechanism (e.g., AeroDynamic, LiquidDynamic, SolidDynamic), which involves the interaction of different material classes (e.g., Gas, Liquid, Solid)  Inspired by Gaver&apos;s principles (1993) and the taxonomy of sound-producing interactions (Lemaitre &amp; Heller, 2013).</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -3305,7 +3444,11 @@
 
     <!-- http://www.w3id.org/sounds/ontology/SoundMechanism -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/SoundMechanism"/>
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/SoundMechanism">
+        <rdfs:comment>Sound mechanisms correspond to the sound-producing events in Gaver (1993), which were previously employed in a taxonomy of action sounds (Lemaitre &amp; Heller, 2013). In this taxonomy, the sound-mechanism was referred to &quot;Type of Sound&quot; at the second level of the taxonomic schema.
+
+They correspond to the physical event, directly causing the sound waves, which are processed by the auditory system. They are intermediate representations of sound (i.e., &quot;hyper-acoustics&quot;), not to be confused with the higher-level sound descriptions under the &quot;Sound&quot;-class.</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -3340,12 +3483,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/SoundAcoustics"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasAcoustics"/>
-                <owl:hasValue rdf:resource="http://www.w3id.org/sounds/ontology/Periodic"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3359,7 +3496,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Spark -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Spark">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -3463,7 +3600,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Squish -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Squish">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -3548,7 +3685,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Stomp -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Stomp">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -3564,7 +3701,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Strike -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Strike">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -3644,7 +3781,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Tap -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Tap">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -3652,7 +3789,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Tear -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Tear">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -3660,7 +3797,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Think -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Think">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/AbstractAction"/>
     </owl:Class>
     
 
@@ -3853,14 +3990,14 @@
     <!-- http://www.w3id.org/sounds/ontology/Vibrate -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Vibrate">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolids"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/VibratingSolid"/>
     </owl:Class>
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/VibratingSolids -->
+    <!-- http://www.w3id.org/sounds/ontology/VibratingSolid -->
 
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/VibratingSolids">
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/VibratingSolid">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -3965,8 +4102,8 @@
     <!-- http://www.w3id.org/sounds/ontology/Wash -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Wash">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/InteractionWithObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/LiquidSound"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
@@ -3988,7 +4125,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Whack -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Whack">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Impact"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ImpactSound"/>
     </owl:Class>
     
 
@@ -4036,7 +4173,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Whip -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Whip">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Wind"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/WindSound"/>
     </owl:Class>
     
 
@@ -4044,7 +4181,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Whirl -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Whirl">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Wind"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/WindSound"/>
     </owl:Class>
     
 
@@ -4068,7 +4205,26 @@
     <!-- http://www.w3id.org/sounds/ontology/Wind -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Wind">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/AeroDynamics"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/AeroDynamic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/sounds/ontology/WindSound -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/WindSound">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Sound"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Wind"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Sound"/>
     </owl:Class>
     
 
@@ -4151,7 +4307,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Wreck -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Wreck">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Deformation"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/DeformationSound"/>
     </owl:Class>
     
 
@@ -4191,7 +4347,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Zap -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Zap">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Explosive"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/ExplosiveSound"/>
     </owl:Class>
     
 
@@ -4658,10 +4814,10 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/AeroDynamics"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/FluidDynamics"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/HybridDynamics"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/VibratingSolids"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/AeroDynamic"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/FluidDynamic"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/HybridDynamic"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/VibratingSolid"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -4676,7 +4832,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/AirInTube"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Explosive"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Explosion"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Wind"/>
         </owl:members>
     </rdf:Description>
@@ -4820,12 +4976,11 @@
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Blast"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Blowout"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Blust"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Boom"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Burst"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Eruption"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Bust"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Erupt"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Explode"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Explosion"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Fusillade"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Gunfire"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Gunshot"/>
