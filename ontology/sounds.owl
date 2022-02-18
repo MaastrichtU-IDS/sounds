@@ -288,7 +288,7 @@
                     <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/SoundMechanism"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMaterial"/>
-                        <owl:allValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Gas"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Gas"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1715,7 +1715,7 @@
                     <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/SoundMechanism"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMaterial"/>
-                        <owl:allValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Liquid"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Liquid"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -4109,7 +4109,7 @@ They correspond to the physical event, directly causing the sound waves, which a
                     <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/SoundMechanism"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMaterial"/>
-                        <owl:allValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Solid"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Solid"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -4914,15 +4914,6 @@ They correspond to the physical event, directly causing the sound waves, which a
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Unlock"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Use"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Wash"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/AeroDynamicMechanism"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/FluidDynamicMechanism"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/HybridDynamicMechanism"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/VibratingSolidMechanism"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
