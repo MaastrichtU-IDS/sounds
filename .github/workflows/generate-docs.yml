@@ -42,6 +42,10 @@ jobs:
         ontospy gendocs -o docs/browse --type 2 --preflabel label --nobrowser $ONTOLOGY_FILE
         ontospy gendocs -o docs/tree --type 4 --preflabel label --nobrowser $ONTOLOGY_FILE
         ontospy gendocs -o docs/graph --type 10 --preflabel label --nobrowser $ONTOLOGY_FILE
+        
+    - name: Check original branch content
+      run: |
+        ls 
     
     - name: Commit and push
       run: |
@@ -50,6 +54,10 @@ jobs:
         mkdir -p docs/lode/sections/
         cp templates/description-en.html docs/lode/sections/description-en.html
         cp templates/references-en.html docs/lode/sections/references-en.html
+        
+        cd docs/lods
+        ls
+        
         git fetch
         # Creating clean gh-pages branch
         git checkout --orphan gh-pages
