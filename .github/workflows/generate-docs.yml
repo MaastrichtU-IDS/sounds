@@ -52,6 +52,7 @@ jobs:
       run: |
         git config --global user.name 'martinbremm'
         git config --global user.email 'm.bremm@student.maastrichtuniversity.nl'
+        mkdir -p docs/lode/sections/
         cp templates/description-en.html docs/lode/sections/description-en.html
         cp templates/references-en.html docs/lode/sections/references-en.html
         git fetch
