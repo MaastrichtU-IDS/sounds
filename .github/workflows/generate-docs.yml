@@ -36,12 +36,11 @@ jobs:
     - name: Generate docs with Widoco (LODE)
       run: |
         java -jar widoco.jar -ontFile $ONTOLOGY_FILE -outFolder docs/lode/ -getOntologyMetadata -oops -rewriteAll -webVowl -licensius -includeAnnotationProperties
-    
-    - name: where are we
-      run: pwd
       
-    - name: show directory
-      run: ls
+    - name: Show docs durectory
+      run: |
+        cd ./docs
+        ls
       
     - name: Generate docs with Ontospy
       run: |
