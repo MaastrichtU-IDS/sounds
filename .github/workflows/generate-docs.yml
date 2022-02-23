@@ -55,7 +55,7 @@ jobs:
         cp templates/description-en.html docs/lode/sections/description-en.html
         cp templates/references-en.html docs/lode/sections/references-en.html
         
-        cd docs/lods
+        cd docs/lode
         ls
         
         git fetch
@@ -64,7 +64,7 @@ jobs:
         git reset --hard
         
         # Moving doc file to gh-pages branch
-        git checkout origin/experiment ./docs
+        git checkout origin/experiment docs
               
         ls
         
