@@ -39,7 +39,7 @@ jobs:
       
     - name: Show docs durectory
       run: |
-        cd ./docs
+        cd ./docs/lode
         ls
       
     - name: Generate docs with Ontospy
