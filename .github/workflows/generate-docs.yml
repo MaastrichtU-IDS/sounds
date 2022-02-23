@@ -2,7 +2,7 @@ name: Generate Sounds ontology documentation
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ experiment ]
     paths:
     - 'ontology/sounds.owl'
     - '.github/workflows/generate-docs.yml'
@@ -37,6 +37,12 @@ jobs:
       run: |
         java -jar widoco.jar -ontFile $ONTOLOGY_FILE -outFolder docs/lode/ -getOntologyMetadata -oops -rewriteAll -webVowl -licensius -includeAnnotationProperties
     
+    - name: where are we
+      run: pwd
+      
+    - name: show directory
+      run: ls
+      
     - name: Generate docs with Ontospy
       run: |
         ontospy gendocs -o docs/browse --type 2 --preflabel label --nobrowser $ONTOLOGY_FILE
