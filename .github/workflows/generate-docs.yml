@@ -65,7 +65,7 @@ jobs:
         # Moving doc file to gh-pages branch
         # git checkout origin/experiment docs
         
-        cd docs/
+        cd docs/lode/doc
         ls
         
         mv index-en.html index.html
