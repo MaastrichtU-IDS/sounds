@@ -35,8 +35,8 @@ jobs:
 
     - name: Generate docs with Widoco (LODE)
       run: |
-        java -jar widoco.jar -ontFile $ONTOLOGY_FILE -outFolder docs/lode/ -getOntologyMetadata -oops -rewriteAll -webVowl -licensius -includeAnnotationProperties
-    
+        java -jar widoco.jar -ontFile $ONTOLOGY_FILE -outFolder docs/lode/ -getOntologyMetadata -oops -rewriteAll -webVowl -licensius -ignoreIndividuals -includeAnnotationProperties
+      
     - name: Generate docs with Ontospy
       run: |
         ontospy gendocs -o docs/browse --type 2 --preflabel label --nobrowser $ONTOLOGY_FILE
@@ -47,15 +47,22 @@ jobs:
       run: |
         git config --global user.name 'martinbremm'
         git config --global user.email 'm.bremm@student.maastrichtuniversity.nl'
+        mkdir -p docs/lode/sections/
         cp templates/description-en.html docs/lode/sections/description-en.html
         cp templates/references-en.html docs/lode/sections/references-en.html
+        
+        
         git fetch
+        # Creating clean gh-pages branch
         git checkout --orphan gh-pages
-        # Remove all directory and files but docs
-        rm -rf browse tree graph lode templates .github *.jar
-        mv docs/* .
-        rm -rf docs
-        mv lode/* .
+        git reset --hard
+        
+        # Moving doc file to gh-pages branch
+        # git checkout origin/experiment docs
+        
+        cd docs/lode/doc
+        ls
+        
         mv index-en.html index.html
         find . -type f -exec sed -i "s/index-en\.html/index.html/g" {} +
         find . -type f -exec sed -i "s/\[Ontology Name\]/Sounds/g" {} +
