@@ -4481,22 +4481,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/Shoot_(Bow) -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Shoot_(Bow)">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/InteractionWithObject"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/ontology/Shoot_(Rifle) -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Shoot_(Rifle)">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/InteractionWithObject"/>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
