@@ -3346,30 +3346,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/Smell -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Smell">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/BodilyFunctionSound"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/AirInTube"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasBodyPart"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/ontology/Nose"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/ontology/Smoke -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Smoke">
