@@ -80,7 +80,7 @@
     <owl:ObjectProperty rdf:about="http://www.w3id.org/sounds/ontology/hasMaterial">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <owl:inverseOf rdf:resource="http://www.w3id.org/sounds/ontology/isMaterialOf"/>
-        <rdfs:range rdf:resource="http://www.w3id.org/sounds/ontology/Material"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/sounds/ontology/SoundMaterial"/>
     </owl:ObjectProperty>
     
 
@@ -1622,14 +1622,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/Female -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Female">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Attributes"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/ontology/Fight -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Fight">
@@ -1842,7 +1834,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Gas -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Gas">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Material"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/SoundMaterial"/>
     </owl:Class>
     
 
@@ -2192,7 +2184,7 @@
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3id.org/sounds/ontology/hasMaterial"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://www.w3id.org/sounds/ontology/Material"/>
+                        <owl:onClass rdf:resource="http://www.w3id.org/sounds/ontology/SoundMaterial"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -2374,7 +2366,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Liquid -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Liquid">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Material"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/SoundMaterial"/>
     </owl:Class>
     
 
@@ -2460,14 +2452,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/ontology/Male -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Male">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Attributes"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/ontology/Man -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Man">
@@ -2480,19 +2464,6 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/March">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/LocomotionSound"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/ontology/Material -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Material">
-        <owl:disjointUnionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Gas"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Liquid"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Solid"/>
-        </owl:disjointUnionOf>
-        <rdfs:comment>Physical material involved in a sound (i.e. its mechanism or source)</rdfs:comment>
     </owl:Class>
     
 
@@ -3485,7 +3456,7 @@
     <!-- http://www.w3id.org/sounds/ontology/Solid -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Solid">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/Material"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/ontology/SoundMaterial"/>
     </owl:Class>
     
 
@@ -3501,7 +3472,8 @@
     <!-- http://www.w3id.org/sounds/ontology/Sound -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/Sound">
-        <rdfs:comment>Sounds are defined as a specific action, which can be defined by a sound mechanism (e.g., AeroDynamic, LiquidDynamic, SolidDynamic), which involves the interaction of different material classes (e.g., Gas, Liquid, Solid)  Inspired by Gaver&apos;s principles (1993) and the taxonomy of sound-producing interactions (Lemaitre &amp; Heller, 2013).</rdfs:comment>
+        <rdfs:comment>Sounds are defined as a specific action, which can be defined by a sound mechanism (e.g., AeroDynamic, LiquidDynamic, SolidDynamic), which involves the interaction of different material classes (e.g., Gas, Liquid, Solid).
+Inspired by Gaver&apos;s principles (1993) and the taxonomy of sound-producing interactions (Lemaitre &amp; Heller, 2013).</rdfs:comment>
     </owl:Class>
     
 
@@ -3515,6 +3487,19 @@
     <!-- http://www.w3id.org/sounds/ontology/SoundContext -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/SoundContext"/>
+    
+
+
+    <!-- http://www.w3id.org/sounds/ontology/SoundMaterial -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/ontology/SoundMaterial">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Gas"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Liquid"/>
+            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Solid"/>
+        </owl:disjointUnionOf>
+        <rdfs:comment>Physical material involved in a sound (i.e. its mechanism or source)</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -5116,15 +5101,6 @@ They correspond to the physical event, directly causing the sound waves, which a
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Swim"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Trot"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Walk"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Empty"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Female"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Full"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/ontology/Male"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
