@@ -1,0 +1,14 @@
+sounds ontology - competency questions:
+
+1) Which sound source typically produces locomotion sounds? (animate)
+2) Which body parts are typically involved in locomotion sounds? (legs, feet)
+3) Does the involvement of "body part" imply "animate agent"? 
+4) Which actions are similar to "scratching", based on the materials involved? (friction sounds, e.g., grind, scrape…)
+5) What kind of sound mechanism is Tearing? (deformation)
+6) Which dynamics (aero, fluid, vibrating solid) are involved in a grinding sound? (vibrating solid)
+7) Which sound mechanisms involve deformation of a solid?  (bag, bend..., wreck)
+8) Which body part(s) are involved in an applause? (hand)
+9) What types of sound acoustics are there? (recurrence, regularity)
+10) Pulsate involves which sound source? (liquid)
+11) Which animate movements involve wings? (fly, buzz, flap)
+
