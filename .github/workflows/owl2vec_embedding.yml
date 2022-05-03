@@ -1,0 +1,52 @@
+
+
+name: Generate ontology embedding
+on:
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+    paths:
+    - 'WordNet_SoundSource.owl'
+    - '.github/workflows/generate-embedding.yml'
+env:
+  ONTOLOGY_FILE: WordNet_SoundSource.owl
+jobs:
+  generate-docs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
+        
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+  
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        #pip install nltk==3.5
+        #pip install scikit-learn==0.24.2
+        #pip install pyparsing==2.4.7
+        #pip install --upgrade gensim
+        pip install owl2vec_star
+        
+    - name: Create embeddings dir
+      run: mkdir -p ./embeddings
+        
+    - name: Generate embeddings with OWL2Vec*
+      run: |
+        owl2vec_star standalone --config_file default.cfg      
+     
+    - name: Commit and push
+      run: |
+        git config --global user.name 'martinbremm'
+        git config --global user.email 'm.bremm@student.maastrichtuniversity.nl'
+        
+        git add embeddings
+        git commit -m "Automatically generate embeddings from OWL ontology file using OWL2Vec-Star."
+        git push || exit 0
