@@ -26,7 +26,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        ls
         python -m pip install --upgrade pip
         pip install owl2vec_star
         
@@ -35,6 +34,7 @@ jobs:
         
     - name: Generate embeddings with OWL2Vec*
       run: |
+        ls
         owl2vec_star standalone --config_file default.cfg      
      
     - name: Commit and push
