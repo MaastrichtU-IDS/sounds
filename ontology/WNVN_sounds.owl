@@ -2447,7 +2447,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#break.v.35 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#break.v.35">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Break"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#appear-48.1.1"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emerge from the surface of a body of water</rdfs:comment>
     </owl:Class>
@@ -14314,7 +14313,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#run.v.03 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#run.v.03">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Run"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#meander-47.7"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stretch out over a distance, space, time, or scope; run or extend between two points or beyond a certain point</rdfs:comment>
     </owl:Class>
@@ -19697,7 +19695,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#wind.v.05 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#wind.v.05">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Wind"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#knead-26.5"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coil the spring of (some mechanical device) by turning a stem</rdfs:comment>
     </owl:Class>
@@ -20658,6 +20655,12 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/AirInTube">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/AeroDynamicMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -21774,6 +21777,12 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Drip">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/FluidDynamicMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -21901,6 +21910,12 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Explosion">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/AeroDynamicMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -23342,6 +23357,12 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Ripple">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/FluidDynamicMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -23410,6 +23431,12 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Run">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/FluidDynamicMechanism"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/LocomotionSound"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasAcoustics"/>
@@ -23935,6 +23962,20 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Spatter">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/LiquidSolidMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Solid"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -23991,6 +24032,20 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Splash">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/LiquidSolidMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Solid"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -23999,6 +24054,20 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Splatter">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/LiquidSolidMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Solid"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -24007,6 +24076,20 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Splosh">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/LiquidSolidMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Solid"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -24664,6 +24747,12 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Wind">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/AeroDynamicMechanism"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Gas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
