@@ -7,9 +7,9 @@ on:
     - '/ontology/WNVN_sounds.owl'
     - '.github/workflows/owl2vec-embedding.yml'
 env:
-  ONTOLOGY_FILE: /ontology/WNVN_sounds.owl
+  ONTOLOGY_FILE: WNVN_sounds.owl
 jobs:
-  generate-docs:
+  generate-embeddings:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -26,6 +26,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+        ls
         python -m pip install --upgrade pip
         pip install owl2vec_star
         
