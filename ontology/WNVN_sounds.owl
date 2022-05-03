@@ -1052,7 +1052,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#air.v.03 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#air.v.03">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Air"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#37.x"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">broadcast over the airwaves, as in radio or television</rdfs:comment>
     </owl:Class>
@@ -1325,7 +1324,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#arm.v.01 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#arm.v.01">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Arm"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#equip-13.4.2-1"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prepare oneself for a military confrontation</rdfs:comment>
     </owl:Class>
@@ -2676,7 +2674,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#bubble.v.01 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#bubble.v.01">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Bubble"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#substance_emission-43.4"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">form, produce, or emit bubbles</rdfs:comment>
     </owl:Class>
@@ -6797,7 +6794,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#empty.v.02 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#empty.v.02">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Empty"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#clear-10.3-1"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">become empty or void of its content</rdfs:comment>
     </owl:Class>
@@ -7234,7 +7230,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#exhaust.v.01 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#exhaust.v.01">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Exhaust"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#amuse-31.1"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wear out completely</rdfs:comment>
     </owl:Class>
@@ -15647,7 +15642,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#ski.v.01 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#ski.v.01">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Ski"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#vehicle-51.4.1-1"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move along on skis</rdfs:comment>
     </owl:Class>
@@ -16881,7 +16875,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#steam.v.05 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#steam.v.05">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Steam"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#10.x"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clean by means of steaming</rdfs:comment>
     </owl:Class>
@@ -18973,7 +18966,6 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#vehicle-51.4.1 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#vehicle-51.4.1">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Motion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
@@ -19695,8 +19687,8 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#wind.v.03 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#wind.v.03">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/onto_link/WindSound"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#coil-9.6"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/WindSound"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arrange or or coil around</rdfs:comment>
     </owl:Class>
     
@@ -21082,15 +21074,10 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/Bubble">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3id.org/sounds/onto_link/SoundMechanism"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Liquid"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
     
@@ -22796,15 +22783,17 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.w3id.org/sounds/onto_link/MovementSound"/>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3id.org/sounds/onto_link/Foot"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasBodyPart"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Leg"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasBodyPart"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.w3id.org/sounds/onto_link/Foot"/>
+                                    <rdf:Description rdf:about="http://www.w3id.org/sounds/onto_link/Leg"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMechanism"/>
                         <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Step"/>
@@ -24682,17 +24671,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     <!-- http://www.w3id.org/sounds/onto_link/WindSound -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/onto_link/WindSound">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3id.org/sounds/onto_link/Sound"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3id.org/sounds/onto_link/hasMechanism"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/onto_link/Wind"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/onto_link/Sound"/>
     </owl:Class>
     
