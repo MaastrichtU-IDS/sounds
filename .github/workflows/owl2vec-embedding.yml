@@ -7,7 +7,7 @@ on:
     - '/ontology/WNVN_sounds.owl'
     - '.github/workflows/owl2vec-embedding.yml'
 env:
-  ONTOLOGY_FILE: WNVN_sounds.owl
+  ONTOLOGY_FILE: /ontology/WNVN_sounds.owl
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
