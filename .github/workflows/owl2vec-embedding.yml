@@ -1,15 +1,13 @@
-
-
 name: Generate ontology embedding
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths:
-    - 'WordNet_SoundSource.owl'
-    - '.github/workflows/generate-embedding.yml'
+    - '/ontology/WNVN_sounds.owl'
+    - '.github/workflows/owl2vec-embedding.yml'
 env:
-  ONTOLOGY_FILE: WordNet_SoundSource.owl
+  ONTOLOGY_FILE: WNVN_sounds.owl
 jobs:
   generate-docs:
     runs-on: ubuntu-latest
@@ -29,10 +27,6 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        #pip install nltk==3.5
-        #pip install scikit-learn==0.24.2
-        #pip install pyparsing==2.4.7
-        #pip install --upgrade gensim
         pip install owl2vec_star
         
     - name: Create embeddings dir
