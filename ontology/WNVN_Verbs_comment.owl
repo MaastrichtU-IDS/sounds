@@ -1931,7 +1931,7 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#body_internal_motion-49 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#body_internal_motion-49">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Body_Internal Motion"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Body_Internal%20Motion"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -2129,7 +2129,7 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#braid-41.2.2 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#braid-41.2.2">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily Care"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily%20Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -6080,7 +6080,7 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#dress-41.1.1 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#dress-41.1.1">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily Care"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily%20Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -7817,7 +7817,7 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#floss-41.2.1 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#floss-41.2.1">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily Care"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily%20Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -15125,7 +15125,7 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#simple_dressing-41.3.1 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#simple_dressing-41.3.1">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily Care"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily%20Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -19976,7 +19976,7 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#41.x -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#41.x">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily Care"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily%20Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -20093,7 +20093,7 @@
     <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#58.x -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#58.x">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Urging and Begging"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Urging%20and%20Begging"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -20153,27 +20153,27 @@
     
 
 
-    <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Body_Internal Motion -->
+    <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Body_Internal%20Motion -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Body_Internal Motion">
+    <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Body_Internal%20Motion">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Verb"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily Care -->
+    <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily%20Care -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily Care">
+    <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Grooming_and_Bodily%20Care">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Verb"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Urging and Begging -->
+    <!-- http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Urging%20and%20Begging -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Urging and Begging">
+    <owl:Class rdf:about="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Urging%20and%20Begging">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment#Verb"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
