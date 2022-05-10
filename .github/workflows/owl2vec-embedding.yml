@@ -4,10 +4,10 @@ on:
   push:
     branches: [ main ]
     paths:
-    - '/ontology/WNVN_sounds.owl'
+    - '/ontology/sounds_sources_verbs.owl'
     - '.github/workflows/owl2vec-embedding.yml'
 env:
-  ONTOLOGY_FILE: WNVN_sounds.owl
+  ONTOLOGY_FILE: sounds_sources_verbs.owl
 jobs:
   generate-embeddings:
     runs-on: ubuntu-latest
