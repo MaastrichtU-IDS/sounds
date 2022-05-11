@@ -238,6 +238,22 @@
     
 
 
+    <!-- http://www.w3id.org/sounds/sources_verbs_link#Bray -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link#Bray">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/NonSpeech"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/sounds/sources_verbs_link#Jingle -->
+
+    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link#Jingle">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/ImpactSound"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Abrade -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Abrade">
