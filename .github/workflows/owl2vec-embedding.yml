@@ -2,10 +2,11 @@ name: Generate ontology embedding
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: 
+        - main
     paths:
-    - '/ontology/sounds_sources_verbs.owl'
-    - '.github/workflows/owl2vec-embedding.yml'
+        - '/ontology/sounds_sources_verbs.owl'
+        - '.github/workflows/owl2vec-embedding.yml'
 env:
   ONTOLOGY_FILE: sounds_sources_verbs.owl
 jobs:
