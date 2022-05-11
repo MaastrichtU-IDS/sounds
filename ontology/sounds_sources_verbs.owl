@@ -314,15 +314,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Air -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Air">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/air.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Gas"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/AirInTube -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/AirInTube">
@@ -341,14 +332,6 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Alert">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Speech"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Aluminium -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Aluminium">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -456,15 +439,6 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Aspectual">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Verb"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Asphalt -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Asphalt">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/asphalt.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -581,15 +555,6 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Beat">
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/beat.v.20"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/ImpactSound"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Beer -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Beer">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/beer.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
     </owl:Class>
     
 
@@ -814,20 +779,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Bubble -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Bubble">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/hasMaterial"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Build -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Build">
@@ -974,15 +925,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Cement -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Cement">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/cement.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/CementFloor -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/CementFloor">
@@ -993,15 +935,6 @@
                 <owl:hasValue rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Cement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Ceramic -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Ceramic">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/ceramic.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -1212,7 +1145,6 @@
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Clothing -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Clothing">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/clothing.n.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/InanimateSoundSource"/>
     </owl:Class>
     
@@ -1231,15 +1163,6 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Clunk">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Impact"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Coffee -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Coffee">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/coffee.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
     </owl:Class>
     
 
@@ -1411,15 +1334,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Cream -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Cream">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/cream.n.02"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Creation_and_Transformation -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Creation_and_Transformation">
@@ -1466,15 +1380,6 @@
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Crying">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/NonSpeech"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Crystal -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Crystal">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/crystal.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -1822,14 +1727,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Exhaust -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Exhaust">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Gas"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Existence -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Existence">
@@ -1996,7 +1893,6 @@
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Floor -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Floor">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/floor.n.02"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/InanimateSoundSource"/>
     </owl:Class>
     
@@ -2161,7 +2057,6 @@
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Gas -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Gas">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/gas.n.02"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/SoundMaterial"/>
     </owl:Class>
     
@@ -2272,7 +2167,6 @@
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Gun -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Gun">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/gun.n.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/InanimateSoundSource"/>
     </owl:Class>
     
@@ -2345,22 +2239,6 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Gurgle">
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/gurgle.v.02"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/BodilyFunctionSound"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/hasMechanism"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Bubble"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/hasBodyPart"/>
-                                <owl:someValuesFrom rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Mouth"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2397,15 +2275,6 @@
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/hang.v.14"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/InteractionWithObject"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/MovementSound"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Hardwood -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Hardwood">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/hardwood.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -2548,14 +2417,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:comment>Newly adapted and nuanced classification of sound mechanisms, including all interactions between the primary mechanism groups {AeroDynamics, FluidDynamics and VibratingSolids}, corresponding to interactions between the material states {Gas, Liquid, Solid}.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Ice -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Ice">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -2750,15 +2611,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Leather -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Leather">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/leather.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Leg -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Leg">
@@ -2786,19 +2638,9 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Linoleum -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Linoleum">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/linoleum.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Liquid -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Liquid">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/liquid.n.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/SoundMaterial"/>
     </owl:Class>
     
@@ -2962,14 +2804,6 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Meow">
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/meow.v.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/NonSpeech"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Metal -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Metal">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -3211,15 +3045,6 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Pierce">
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/pierce.v.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/InteractionWithObject"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Plastic -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Plastic">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/plastic.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -3630,15 +3455,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Rubber -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Rubber">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/rubber.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Rumble -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Rumble">
@@ -3680,15 +3496,6 @@
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Rustle">
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/rustle.v.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/WindSound"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Sand -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Sand">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/sand.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -4110,15 +3917,6 @@
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Snow -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Snow">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/snow.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Sobbing -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Sobbing">
@@ -4139,7 +3937,6 @@
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Solid -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Solid">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/solid.n.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/SoundMaterial"/>
     </owl:Class>
     
@@ -4179,7 +3976,6 @@ Inspired by Gaver&apos;s principles (1993) and the taxonomy of sound-producing i
     <!-- http://www.w3id.org/sounds/sources_verbs_link/SoundMaterial -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/SoundMaterial">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/material.n.01"/>
         <owl:disjointUnionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Gas"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
@@ -4465,23 +4261,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Steam -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Steam">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Gas"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Steel -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Steel">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/steel.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Step -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Step">
@@ -4545,15 +4324,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Strike">
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/strike.v.07"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/ImpactSound"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Styrofoam -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Styrofoam">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/styrofoam.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -5024,15 +4794,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Water -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Water">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/water.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Weather -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Weather">
@@ -5148,15 +4909,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Wine -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Wine">
-        <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/wine.n.01"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Liquid"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/sounds/sources_verbs_link/Wing -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Wing">
@@ -5214,14 +4966,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Woman">
         <owl:equivalentClass rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/woman.n.01"/>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Person"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/sounds/sources_verbs_link/Wood -->
-
-    <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Wood">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/Solid"/>
     </owl:Class>
     
 
@@ -44446,7 +44190,7 @@ They correspond to the physical event, directly causing the sound waves, which a
     <!-- http://www.w3id.org/sounds/sources_verbs_link/location.n.01 -->
 
     <owl:Class rdf:about="http://www.w3id.org/sounds/sources_verbs_link/location.n.01">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/physical_entity.n.01"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/sounds/sources_verbs_link/SoundContext"/>
         <rdfs:comment>a point or extent in space</rdfs:comment>
     </owl:Class>
     
@@ -80379,39 +80123,9 @@ They correspond to the physical event, directly causing the sound waves, which a
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Air"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Exhaust"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Steam"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/AirInTube"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Explosion"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Wind"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Aluminium"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Asphalt"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Cement"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Ceramic"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Crystal"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Hardwood"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Ice"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Leather"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Linoleum"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Metal"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Plastic"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Rubber"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Sand"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Snow"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Steel"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Styrofoam"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Wood"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
@@ -80514,17 +80228,6 @@ They correspond to the physical event, directly causing the sound waves, which a
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Squish"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Tear"/>
             <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Wreck"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Beer"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Bubble"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Coffee"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Cream"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Water"/>
-            <rdf:Description rdf:about="http://www.w3id.org/sounds/sources_verbs_link/Wine"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
