@@ -246,9 +246,9 @@
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/Grooming_and_BodilyCare -->
+    <!-- http://www.w3id.org/VNsounds/ontology/Grooming_and_Bodily_Care -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Grooming_and_BodilyCare">
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Grooming_and_Bodily_Care">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Verb"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
@@ -2156,7 +2156,7 @@
     <!-- http://www.w3id.org/VNsounds/ontology/braid-41.2.2 -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/braid-41.2.2">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_BodilyCare"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_Bodily_Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -6107,7 +6107,7 @@
     <!-- http://www.w3id.org/VNsounds/ontology/dress-41.1.1 -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/dress-41.1.1">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_BodilyCare"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_Bodily_Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -7844,7 +7844,7 @@
     <!-- http://www.w3id.org/VNsounds/ontology/floss-41.2.1 -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/floss-41.2.1">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_BodilyCare"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_Bodily_Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -15152,7 +15152,7 @@
     <!-- http://www.w3id.org/VNsounds/ontology/simple_dressing-41.3.1 -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/simple_dressing-41.3.1">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_BodilyCare"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_Bodily_Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -20003,7 +20003,7 @@
     <!-- http://www.w3id.org/VNsounds/ontology/41.x -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/41.x">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_BodilyCare"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Grooming_and_Bodily_Care"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
