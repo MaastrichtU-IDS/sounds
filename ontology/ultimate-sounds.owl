@@ -64,6 +64,38 @@
     
 
 
+    <!-- http://www.w3id.org/VNsounds/ontology#Drip -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Drip">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology#Pour -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Pour">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology#Ripple -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Ripple">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology#Splash -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Splash">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/VNsounds/ontology/AeroDynamicMechanism -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/AeroDynamicMechanism">
@@ -4676,12 +4708,6 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/complete-55.2">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Aspectual"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/PhysicalImpact"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -14415,12 +14441,6 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/reflexive_appearance-48.1.2">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Appearance_Disappearance_and_Occurrence"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/PhysicalImpact"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -19280,7 +19300,7 @@ They correspond to the physical event, directly causing the sound waves, which a
     <!-- http://www.w3id.org/VNsounds/ontology/transfer_mesg-37.1.1 -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/transfer_mesg-37.1.1">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Communication"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/tell-37.2"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
@@ -21291,7 +21311,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Vocal"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/PhysicalImpact"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
@@ -21627,12 +21647,6 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/50.x">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/Assuming_a_Position"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Vocal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
