@@ -5,7 +5,7 @@ on:
     branches: 
         - main
     paths:
-        - 'ontology/sounds_sources_verbs.owl'
+        - 'ontology/ultimate-sounds.owl'
         - '.github/workflows/owl2vec-embedding.yml'
 env:
   ONTOLOGY_FILE: sounds_sources_verbs.owl
