@@ -373,6 +373,70 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
+    <!-- http://www.w3id.org/VNsounds/ontology/bray -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/bray">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/animal_sounds-38"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/chirp -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/chirp">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/animal_sounds-38"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/crackle -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/crackle">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/sound_emission-43.2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/crumple -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/crumple">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/other_cos-45.4"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/fart -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/fart">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/nonverbal_expression-40.2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/flutter -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/flutter">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/animal_sounds-38"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/jingle -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/jingle">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/sound_emission-43.2"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/snore -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/snore">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/nonverbal_expression-40.2"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/VNsounds/ontology/10.x -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/10.x">
@@ -17787,12 +17851,6 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/VerbNet/sound_emission-43.2">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/Emission"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Vocal"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
