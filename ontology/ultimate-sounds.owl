@@ -127,6 +127,14 @@
     
 
 
+    <!-- http://www.w3id.org/VNsounds/ontology/ElectricMechanism -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/ElectricMechanism">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/VNsounds/ontology/Expansion -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Expansion">
@@ -145,9 +153,9 @@
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/Filling -->
+    <!-- http://www.w3id.org/VNsounds/ontology/Fill -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Filling">
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Fill">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
         <rdfs:comment>Liquid being poured into a vessel of any kind</rdfs:comment>
     </owl:Class>
@@ -234,11 +242,10 @@
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/Motion -->
+    <!-- http://www.w3id.org/VNsounds/ontology/Movement -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Motion">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
-        <rdfs:comment>motion of a solid object through a liquid/aerodynamic space</rdfs:comment>
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Movement">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundAttribute"/>
     </owl:Class>
     
 
@@ -271,6 +278,22 @@
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Ripple">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/Roll -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Roll">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/Scrape -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Scrape">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
     </owl:Class>
     
 
@@ -322,6 +345,12 @@
     <!-- http://www.w3id.org/VNsounds/ontology/SoundAcoustics -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/SoundAcoustics"/>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/SoundAttribute -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/SoundAttribute"/>
     
 
 
@@ -382,19 +411,18 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/UnconstrainedAirFlow -->
+    <!-- http://www.w3id.org/VNsounds/ontology/Static -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/UnconstrainedAirFlow">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/AeroDynamicMechanism"/>
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Static">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundAttribute"/>
     </owl:Class>
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/Vibration -->
+    <!-- http://www.w3id.org/VNsounds/ontology/UnconstrainedAirFlow -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Vibration">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
-        <rdfs:comment>Oscillations or tremulations of solid material or body parts</rdfs:comment>
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/UnconstrainedAirFlow">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/AeroDynamicMechanism"/>
     </owl:Class>
     
 
