@@ -79,7 +79,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
-        <rdfs:comment>&quot;Aerodynamic sounds are caused by the direct introduction and modification of atmospheric pressure differences from some source&quot; (Gaver, 1993)</rdfs:comment>
+        <rdfs:comment>&quot;aerodynamic sounds are caused by the direct introduction and modification of atmospheric pressure differences from some source&quot; (Gaver, 1993)</rdfs:comment>
     </owl:Class>
     
 
@@ -149,7 +149,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Fill">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
-        <rdfs:comment>Liquid filling a container (Guyot et al., 2017)</rdfs:comment>
+        <rdfs:comment>liquid filling a container (Guyot et al., 2017)</rdfs:comment>
     </owl:Class>
     
 
@@ -158,7 +158,7 @@
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Flow">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
-        <rdfs:comment>Liquid flowing into another liquid/water (Guyot et al., 2017)</rdfs:comment>
+        <rdfs:comment>liquid flowing into another liquid/water (Guyot et al., 2017)</rdfs:comment>
     </owl:Class>
     
 
@@ -331,7 +331,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
-        <rdfs:comment>&quot;Sound waves created by solid objects are due to the interaction of a vibrating surface with the atmosphere&quot; (Gaver, 1993)</rdfs:comment>
+        <rdfs:comment>&quot;sound waves created by solid objects are due to the interaction of a vibrating surface with the atmosphere&quot; (Gaver, 1993)</rdfs:comment>
     </owl:Class>
     
 
@@ -400,7 +400,7 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Splash">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
-        <rdfs:comment>&quot;chaging cavities are formed which resonate, amplify and modify the sounds made by impacts of liquid on itself and other objects&quot; (Gaver, 1993)</rdfs:comment>
+        <rdfs:comment>&quot;changing cavities are formed which resonate, amplify and modify the sounds made by impacts of liquid on itself and other objects&quot; (Gaver, 1993)</rdfs:comment>
     </owl:Class>
     
 
