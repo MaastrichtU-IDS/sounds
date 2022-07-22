@@ -80,6 +80,14 @@
     
 
 
+    <!-- http://www.w3id.org/VNsounds/ontology#Eject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Eject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/UnconstrainedAirFlow"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/VNsounds/ontology#Pour -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Pour">
