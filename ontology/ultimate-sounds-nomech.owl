@@ -64,46 +64,6 @@
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology#Bubble -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Bubble">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/VNsounds/ontology#Cut -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Cut">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/VNsounds/ontology#Eject -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Eject">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/UnconstrainedAirFlow"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/VNsounds/ontology#Pour -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Pour">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/VNsounds/ontology#Spray -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology#Spray">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.w3id.org/VNsounds/ontology/AeroDynamicMechanism -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/AeroDynamicMechanism">
@@ -120,6 +80,14 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
         <rdfs:comment>&quot;aerodynamic sounds are caused by the direct introduction and modification of atmospheric pressure differences from some source&quot; (Gaver, 1993)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/Bubble -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Bubble">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
     </owl:Class>
     
 
@@ -150,11 +118,27 @@
     
 
 
+    <!-- http://www.w3id.org/VNsounds/ontology/Cut -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Cut">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/VNsounds/ontology/Drip -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Drip">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
         <rdfs:comment>&quot;short-lived pitched impulse followed quickly by several higher pitched, even shorter lived ones&quot; (Gaver, 1993)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/Eject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Eject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/UnconstrainedAirFlow"/>
     </owl:Class>
     
 
@@ -295,6 +279,14 @@
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Periodic">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundRegularity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/Pour -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Pour">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
     </owl:Class>
     
 
@@ -441,6 +433,14 @@ They correspond to the physical event, directly causing the sound waves, which a
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Splash">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
         <rdfs:comment>&quot;changing cavities are formed which resonate, amplify and modify the sounds made by impacts of liquid on itself and other objects&quot; (Gaver, 1993)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/VNsounds/ontology/Spray -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Spray">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/LiquidDynamicMechanism"/>
     </owl:Class>
     
 
