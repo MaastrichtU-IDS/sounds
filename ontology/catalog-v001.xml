@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.w3id.org/VNsource/ontology" uri="file:/C:/Users/Martin/Documents/research_internship/FinalOntology/WordNet_VerbNet/WN_SoundSource/WN_PhysEnt_Full_EF.owl"/>
     <uri id="Imports Wizard Entry" name="http://www.w3id.org/VNsource/ontology" uri="file:/C:/Users/Martin/Documents/research_internship/FinalOntology/WordNet_VerbNet/WN_SoundSource/WN_PhysEnt_Reduced_EF.owl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="http://www.semanticweb.org/e.formisano/ontologies/2022/1/WNVN_Verbs_withcomments" uri="WNVN_Verbs_comment.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment" uri="WN_SoundSource.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean" uri="sounds.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="http://www.w3id.org/VNsounds/ontology" uri="ultimate-sounds.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="duplicate:http://www.w3id.org/VNsounds/ontology/" uri="ultimate-sounds-nomech.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="duplicate:http://www.w3id.org/VNsounds/ontology/" uri="ultimate-sounds-WNmech.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="http://www.w3id.org/sounds/ontology/" uri="WNVN_sounds.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="http://www.w3id.org/sounds/sources_verbs_link/" uri="sounds_sources_verbs.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1658842535907" name="https://w3id.org/um/SoundOntology" uri="sound_ontology_prototype.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="http://www.semanticweb.org/e.formisano/ontologies/2022/1/WNVN_Verbs_withcomments" uri="WNVN_Verbs_comment.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="http://www.semanticweb.org/e.formisano/ontologies/2022/1/test_comment" uri="WN_SoundSource.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="http://www.semanticweb.org/martin/ontologies/2022/0/SoundOntologyClean" uri="sounds.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="duplicate:http://www.w3id.org/VNsounds/ontology" uri="ultimate-sounds-WNmech-ReducedSource.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="duplicate:http://www.w3id.org/VNsounds/ontology" uri="ultimate-sounds.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="duplicate:http://www.w3id.org/VNsounds/ontology/" uri="ultimate-sounds-nomech.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="duplicate:http://www.w3id.org/VNsounds/ontology/" uri="ultimate-sounds-WNmech.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="http://www.w3id.org/sounds/ontology/" uri="WNVN_sounds.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="http://www.w3id.org/sounds/sources_verbs_link/" uri="sounds_sources_verbs.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1658842772669" name="https://w3id.org/um/SoundOntology" uri="sound_ontology_prototype.owl"/>
     </group>
 </catalog>
