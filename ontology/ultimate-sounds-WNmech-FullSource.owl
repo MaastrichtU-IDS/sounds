@@ -43,13 +43,19 @@
 
     <!-- http://www.w3id.org/VNsounds/ontology/isMaterialOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMaterialOf"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMaterialOf">
+        <rdfs:domain rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMaterial"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://www.w3id.org/VNsounds/ontology/isMechanismOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMechanismOf"/>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMechanismOf">
+        <rdfs:domain rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
+        <rdfs:range rdf:resource="http://www.w3id.org/VerbNet/SoundAction"/>
+    </owl:ObjectProperty>
     
 
 
