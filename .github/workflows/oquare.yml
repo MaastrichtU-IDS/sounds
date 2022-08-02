@@ -23,5 +23,5 @@ jobs:
       - name: OQuaRE module
         uses: Emdien/oquare-metrics@v2
         with:
-          ontology-folders: sounds/ontology
+          ontology-folders: sounds/ontology/
           ontology-files: ultimate-sounds-nomech.owl
