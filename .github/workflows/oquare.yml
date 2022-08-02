@@ -29,5 +29,5 @@ jobs:
         uses: Emdien/oquare-metrics@v2
         with:
           ontology-folders: sounds/ontology
-          ontology-files: ultimate-sounds-nomech.owl ultimate-sounds-WNmech.owl ultimate-sounds-WNmech-FullSource.owl ultimate-sounds-WNmech-ReducedSource.owl
-          contents-folder: sounds/ontology-evaluation
+          ontology-files: ultimate-sounds-nomech.owl # ultimate-sounds-WNmech.owl ultimate-sounds-WNmech-FullSource.owl ultimate-sounds-WNmech-ReducedSource.owl
+          #contents-folder: sounds/ontology-evaluation
