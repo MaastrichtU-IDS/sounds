@@ -1,7 +1,10 @@
 name: oquare
 
 # Controls when the workflow will run
-on: [push]
+on: 
+  workflow_dispatch:
+  push:
+
 
 jobs:
   build:
