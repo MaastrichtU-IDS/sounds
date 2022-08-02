@@ -1,0 +1,33 @@
+name: oquare
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Evaluate ontologies
+    steps:
+      - uses: actions/checkout@v2
+      # Configuration
+      # Java setup
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+      # Python setup
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+          
+      - name: OQuaRE module
+        uses: Emdien/oquare-metrics@v1
+        with:
+          ontology-folders: sounds/ontology
+          ontology-files: ultimate-sounds-nomech.owl ultimate-sounds-WNmech.owl ultimate-sounds-WNmech-FullSource.owl ultimate-sounds-WNmech-ReducedSource.owl
+          contents-folder: sounds/ontology-evaluation
