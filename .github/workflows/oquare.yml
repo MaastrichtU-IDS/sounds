@@ -19,17 +19,12 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.9'
+      
+      - run: git config --global init.defaultBranch main
           
       - name: OQuaRE module
         uses: Emdien/oquare-metrics@v2
         with:
           ontology-folders: sounds/ontology
           ontology-files: ultimate-sounds-nomech.owl
-          
-      - name: Commit and push
-        run: |
-          git config --global user.name 'martinbremm'
-          git config --global user.email 'm.bremm@student.maastrichtuniversity.nl'
-          git add OQuaRE
-          git commit -m "ontology quality assessment"
-          git push || exit 0
+          ontology-contents: sounds/ontology/ontology-evaluation
