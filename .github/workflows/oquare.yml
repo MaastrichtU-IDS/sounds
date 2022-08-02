@@ -27,4 +27,3 @@ jobs:
         with:
           ontology-folders: sounds/ontology
           ontology-files: ultimate-sounds-nomech.owl
-          ontology-contents: sounds/ontology/ontology-evaluation
