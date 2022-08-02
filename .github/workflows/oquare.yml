@@ -25,3 +25,10 @@ jobs:
         with:
           ontology-folders: sounds/ontology
           ontology-files: ultimate-sounds-nomech.owl
+          
+      - name: Commit and push
+        run: |
+        
+          git add OQuaRE
+          git commit -m "ontology quality assessment"
+          git push || exit 0
