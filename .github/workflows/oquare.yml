@@ -28,7 +28,8 @@ jobs:
           
       - name: Commit and push
         run: |
-        
+          git config --global user.name 'martinbremm'
+          git config --global user.email 'm.bremm@student.maastrichtuniversity.nl'
           git add OQuaRE
           git commit -m "ontology quality assessment"
           git push || exit 0
