@@ -1,9 +1,7 @@
 name: oquare
 
 # Controls when the workflow will run
-on:
-  push:
-    branches: [ "main" ]
+on: [push]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -29,5 +27,4 @@ jobs:
         uses: Emdien/oquare-metrics@v2
         with:
           ontology-folders: sounds/ontology
-          ontology-files: ultimate-sounds-nomech.owl # ultimate-sounds-WNmech.owl ultimate-sounds-WNmech-FullSource.owl ultimate-sounds-WNmech-ReducedSource.owl
-          #contents-folder: sounds/ontology-evaluation
+          ontology-files: sounds/ontology/ultimate-sounds-nomech.owl
