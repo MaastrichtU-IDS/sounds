@@ -1,10 +1,7 @@
 name: oquare
 
 # Controls when the workflow will run
-on: 
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
   build:
@@ -28,4 +25,3 @@ jobs:
         with:
           ontology-folders: sounds/ontology
           ontology-files: ultimate-sounds-nomech.owl
-          reasoner: HERMIT
