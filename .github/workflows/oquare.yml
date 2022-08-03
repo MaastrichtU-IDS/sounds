@@ -1,10 +1,7 @@
 name: oquare
 
 # Controls when the workflow will run
-on: 
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
   build:
@@ -27,5 +24,4 @@ jobs:
         uses: Emdien/oquare-metrics@v2
         with:
           ontology-folders: sounds/ontology
-          ontology-files: ultimate-sounds-nomech.owl
-          reasoner: HERMIT
+          ontology-files: sound_ontology_prototype.owl
