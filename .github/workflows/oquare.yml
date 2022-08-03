@@ -1,7 +1,10 @@
 name: oquare
 
 # Controls when the workflow will run
-on: [workflow_dispatch, push]
+on: 
+  push:
+    branches:
+      - master
 
 jobs:
   build:
@@ -23,5 +26,6 @@ jobs:
       - name: OQuaRE module
         uses: Emdien/oquare-metrics@v2
         with:
-          ontology-folders: sounds/ontology/
+          ontology-folders: sounds/ontology
           ontology-files: ultimate-sounds-nomech.owl
+          reasoner: HERMIT
