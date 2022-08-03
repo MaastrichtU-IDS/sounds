@@ -24,4 +24,4 @@ jobs:
         uses: Emdien/oquare-metrics@v2
         with:
           ontology-folders: sounds/ontology
-          ontology-files: ultimate-sounds-nomech.owl
+          ontology-files: sound_ontology_prototype.owl
