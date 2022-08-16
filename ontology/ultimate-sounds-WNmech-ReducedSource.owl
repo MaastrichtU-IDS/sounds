@@ -151,7 +151,8 @@
     <!-- http://www.w3id.org/VNsounds/ontology/Deformation -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Deformation">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
+        <rdfs:comment>external force causes a solid object to deform, which in turn builds up energy in the solid object in its new deformed state (Gaver, 1993). Includes crumbling/breaking etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -1023,15 +1024,6 @@ They correspond to the physical event, directly causing the sound waves, which a
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/90.x">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/Exceed"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/VNsounds/ontology/Deformation/Deformation -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Deformation/Deformation">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SolidDynamicMechanism"/>
-        <rdfs:comment>external force causes a solid object to deform, which in turn builds up energy in the solid object in its new deformed state (Gaver, 1993). Includes crumbling/breaking etc.</rdfs:comment>
     </owl:Class>
     
 
@@ -6399,20 +6391,6 @@ They correspond to the physical event, directly causing the sound waves, which a
 
     <owl:Class rdf:about="http://www.w3id.org/VerbNet/chew-39.2-1">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VerbNet/Ingesting"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Impact"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Deformation/Deformation"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verbnet class</rdfs:comment>
     </owl:Class>
     
@@ -39877,14 +39855,6 @@ offspring,baby_bird,baby_birds,calf,calves,kitten,lamb,lambs,piglet,shote,pup,pu
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.w3id.org/VNsounds/ontology/Friction"/>
-            <rdf:Description rdf:about="http://www.w3id.org/VNsounds/ontology/Impact"/>
-            <rdf:Description rdf:about="http://www.w3id.org/VNsounds/ontology/Deformation/Deformation"/>
-        </owl:members>
-    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
