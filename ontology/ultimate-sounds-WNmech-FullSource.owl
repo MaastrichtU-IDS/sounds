@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.w3id.org/VNsource/ontology#"
-     xml:base="http://www.w3id.org/VNsource/ontology"
+<rdf:RDF xmlns="http://www.w3id.org/VNsounds/ontology#"
+     xml:base="http://www.w3id.org/VNsounds/ontology"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.w3id.org/VNsource/ontology"/>
+    <owl:Ontology rdf:about="http://www.w3id.org/VNsounds/ontology"/>
     
 
 
@@ -43,19 +43,13 @@
 
     <!-- http://www.w3id.org/VNsounds/ontology/isMaterialOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMaterialOf">
-        <rdfs:domain rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMaterial"/>
-        <rdfs:range rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMaterialOf"/>
     
 
 
     <!-- http://www.w3id.org/VNsounds/ontology/isMechanismOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMechanismOf">
-        <rdfs:domain rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
-        <rdfs:range rdf:resource="http://www.w3id.org/VerbNet/SoundAction"/>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/VNsounds/ontology/isMechanismOf"/>
     
 
 
@@ -67,14 +61,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://www.w3id.org/VNsounds/SoundSource_Class -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/SoundSource_Class">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
-    </owl:Class>
     
 
 
@@ -115,9 +101,9 @@
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/Combustion_Engines -->
+    <!-- http://www.w3id.org/VNsounds/ontology/CombustionEngines -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Combustion_Engines">
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/CombustionEngines">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
     </owl:Class>
     
@@ -453,6 +439,14 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
+    <!-- http://www.w3id.org/VNsounds/ontology/SoundObject -->
+
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/SoundObject">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/VNsounds/ontology/SoundRecurrence -->
 
     <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/SoundRecurrence">
@@ -500,25 +494,17 @@ They correspond to the physical event, directly causing the sound waves, which a
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/Synthetic_sound -->
+    <!-- http://www.w3id.org/VNsounds/ontology/SyntheticMechanism -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Synthetic_sound">
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/SyntheticMechanism">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
     </owl:Class>
     
 
 
-    <!-- http://www.w3id.org/VNsounds/ontology/Unclear_investigate -->
+    <!-- http://www.w3id.org/VNsounds/ontology/UnclearMechanism -->
 
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Unclear_investigate">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3id.org/VNsounds/ontology/Unclear_mechanism -->
-
-    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism">
+    <owl:Class rdf:about="http://www.w3id.org/VNsounds/ontology/UnclearMechanism">
         <rdfs:subClassOf rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundMechanism"/>
     </owl:Class>
     
@@ -56726,7 +56712,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perform an action, or work out or perform (an action)</rdfs:comment>
@@ -57215,7 +57201,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fix firmly and stably</rdfs:comment>
@@ -57488,13 +57474,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/NoSound"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/NoSound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prepare oneself for a military confrontation</rdfs:comment>
@@ -57794,7 +57780,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">take the initiative and go on the offensive</rdfs:comment>
@@ -58001,7 +57987,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move noisily</rdfs:comment>
@@ -58601,7 +58587,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make a strident sound</rdfs:comment>
@@ -58616,7 +58602,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">launch with great force</rdfs:comment>
@@ -58691,7 +58677,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emit a single short high-pitched signal</rdfs:comment>
@@ -59477,7 +59463,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">give suck to</rdfs:comment>
@@ -59692,7 +59678,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fry in a pan until it changes color</rdfs:comment>
@@ -59707,19 +59693,19 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Friction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rub with a brush, or as if with a brush</rdfs:comment>
@@ -59734,19 +59720,19 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Hiss"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clean with a brush</rdfs:comment>
@@ -59761,13 +59747,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">remove with or as if with a brush</rdfs:comment>
@@ -60751,7 +60737,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">take hold of so as to seize or restrain or stop the motion of</rdfs:comment>
@@ -60862,7 +60848,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">have a celebration</rdfs:comment>
@@ -60898,13 +60884,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/NoSound"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/NoSound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">write, draw, or trace with chalk</rdfs:comment>
@@ -60976,7 +60962,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">change clothes; put on different clothes</rdfs:comment>
@@ -61060,7 +61046,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">burn slightly and superficially so as to affect color</rdfs:comment>
@@ -61102,7 +61088,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to make a rush at or sudden attack upon, as in battle</rdfs:comment>
@@ -61354,7 +61340,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -61429,7 +61415,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -61501,7 +61487,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breathe with great difficulty, as when experiencing a strong emotion</rdfs:comment>
@@ -61531,7 +61517,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wring the neck of</rdfs:comment>
@@ -61750,7 +61736,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make a clank</rdfs:comment>
@@ -61825,7 +61811,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">remove unwanted substances from, such as feathers or pits</rdfs:comment>
@@ -61930,7 +61916,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Synthetic_sound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SyntheticMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produce a click</rdfs:comment>
@@ -61960,7 +61946,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perform or finish an action rapidly</rdfs:comment>
@@ -62245,13 +62231,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/NoSound"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/NoSound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tilt or slant to one side</rdfs:comment>
@@ -62542,7 +62528,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">write music</rdfs:comment>
@@ -63109,7 +63095,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">confine in or as if in a coop</rdfs:comment>
@@ -63679,7 +63665,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bend one&apos;s back forward from the waist on down</rdfs:comment>
@@ -63970,7 +63956,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -64396,7 +64382,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cut the head of</rdfs:comment>
@@ -64615,13 +64601,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Synthetic_sound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SyntheticMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -65014,7 +65000,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operate a dial to select a telephone number</rdfs:comment>
@@ -65617,7 +65603,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -66148,7 +66134,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -66169,7 +66155,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -66190,7 +66176,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move by being propelled by a force</rdfs:comment>
@@ -66235,7 +66221,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">approach while driving</rdfs:comment>
@@ -66346,7 +66332,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">die from being submerged in water, getting water into the lungs, and asphyxiating</rdfs:comment>
@@ -66361,7 +66347,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kill by submerging in water</rdfs:comment>
@@ -66514,7 +66500,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">take in solid food</rdfs:comment>
@@ -66529,7 +66515,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eat a meal; take a meal</rdfs:comment>
@@ -66733,7 +66719,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">become known or apparent</rdfs:comment>
@@ -66748,7 +66734,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">come up to the surface of or rise</rdfs:comment>
@@ -67242,7 +67228,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -67857,7 +67843,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pass out from weakness, physical or emotional distress due to a loss of blood supply to the brain</rdfs:comment>
@@ -68208,7 +68194,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">be felt or perceived in a certain way</rdfs:comment>
@@ -68310,7 +68296,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fight against or resist strongly</rdfs:comment>
@@ -68565,7 +68551,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">be in flames or aflame</rdfs:comment>
@@ -69080,7 +69066,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -69122,7 +69108,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -69164,7 +69150,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -69185,7 +69171,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -70106,7 +70092,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make a gurgling sound as of liquid issuing from a bottle</rdfs:comment>
@@ -70154,7 +70140,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eat hastily without proper chewing</rdfs:comment>
@@ -70238,7 +70224,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">to grip or seize, as in a wrestling match</rdfs:comment>
@@ -71231,7 +71217,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attach with a hinge</rdfs:comment>
@@ -71630,7 +71616,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hang in the air; fly or be suspended above</rdfs:comment>
@@ -71813,7 +71799,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">run disconnected or idle</rdfs:comment>
@@ -71828,7 +71814,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cause to start burning; subject to fire or great heat</rdfs:comment>
@@ -71933,7 +71919,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transmit or serve as the medium for transmission</rdfs:comment>
@@ -72164,7 +72150,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cause injuries or bodily harm to</rdfs:comment>
@@ -72470,7 +72456,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">have or perceive an itch</rdfs:comment>
@@ -72485,7 +72471,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">have a strong desire or urge to do something</rdfs:comment>
@@ -72500,7 +72486,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">poke or thrust abruptly</rdfs:comment>
@@ -72545,7 +72531,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place in a cylindrical vessel</rdfs:comment>
@@ -72719,7 +72705,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drive or propel with the foot</rdfs:comment>
@@ -72974,7 +72960,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cause to come to the ground</rdfs:comment>
@@ -73085,7 +73071,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">propel with force</rdfs:comment>
@@ -73145,7 +73131,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enter or escape as through a hole or crack or fissure</rdfs:comment>
@@ -73517,13 +73503,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fasten with a lock</rdfs:comment>
@@ -73676,7 +73662,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -73853,7 +73839,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">become soft or separate and disintegrate as a result of excessive soaking</rdfs:comment>
@@ -73874,7 +73860,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soften, usually by steeping in liquid, and cause to disintegrate as a result</rdfs:comment>
@@ -73889,7 +73875,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wash by machine</rdfs:comment>
@@ -74024,7 +74010,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eliminate urine</rdfs:comment>
@@ -74349,7 +74335,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reduce or cause to be reduced from a solid to a liquid state, usually by heating</rdfs:comment>
@@ -74520,13 +74506,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Synthetic_sound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SyntheticMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adjust the pitch, tone, or volume of</rdfs:comment>
@@ -74541,7 +74527,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make moist</rdfs:comment>
@@ -74637,7 +74623,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cause to move or shift into a new position or place, both in a concrete and in an abstract sense</rdfs:comment>
@@ -74658,7 +74644,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move so as to change position, perform a nontranslational motion</rdfs:comment>
@@ -75099,7 +75085,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">handle and cause to function</rdfs:comment>
@@ -75189,7 +75175,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move or swing from side to side regularly</rdfs:comment>
@@ -75510,7 +75496,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -75531,7 +75517,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">park directly behind another vehicle</rdfs:comment>
@@ -75918,7 +75904,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reproduce by xerography</rdfs:comment>
@@ -76041,7 +76027,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">squeeze tightly between the fingers</rdfs:comment>
@@ -76056,7 +76042,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hit with a pinging noise</rdfs:comment>
@@ -76071,7 +76057,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make a short high-pitched sound</rdfs:comment>
@@ -76161,7 +76147,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">play on an instrument</rdfs:comment>
@@ -76176,7 +76162,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">be at play; be engaged in playful activity; amuse oneself in a way characteristic of children</rdfs:comment>
@@ -76191,7 +76177,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">replay (as a melody)</rdfs:comment>
@@ -76221,7 +76207,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emit recorded sound</rdfs:comment>
@@ -76329,7 +76315,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strip of feathers</rdfs:comment>
@@ -76881,7 +76867,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lengthen or extend in duration or space</rdfs:comment>
@@ -76989,7 +76975,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blow hard and loudly</rdfs:comment>
@@ -77070,13 +77056,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">expand and contract rhythmically; beat rhythmically</rdfs:comment>
@@ -77739,7 +77719,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">become faint or more distant</rdfs:comment>
@@ -77769,7 +77749,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">load anew</rdfs:comment>
@@ -78357,7 +78337,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound with resonance</rdfs:comment>
@@ -78513,13 +78493,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speed up</rdfs:comment>
@@ -78534,7 +78508,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increase the number of rotations per minute</rdfs:comment>
@@ -78732,7 +78706,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sound loudly</rdfs:comment>
@@ -78888,13 +78862,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Synthetic_sound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SyntheticMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">increase in volume</rdfs:comment>
@@ -78924,7 +78898,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -79176,7 +79150,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make a low noise</rdfs:comment>
@@ -79200,7 +79174,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">search haphazardly</rdfs:comment>
@@ -79254,7 +79228,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stretch out over a distance, space, time, or scope; run or extend between two points or beyond a certain point</rdfs:comment>
@@ -79269,7 +79243,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move about freely and without restraint, or act as if running around in an uncontrolled way</rdfs:comment>
@@ -79479,7 +79453,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make a dry crackling sound</rdfs:comment>
@@ -79509,7 +79483,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">traverse or travel on (a body of water)</rdfs:comment>
@@ -79524,7 +79498,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">travel on water propelled by wind</rdfs:comment>
@@ -79746,7 +79720,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distribute loosely</rdfs:comment>
@@ -79806,7 +79780,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bring into random order</rdfs:comment>
@@ -80142,7 +80116,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -80274,7 +80248,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">force, take, or pull apart</rdfs:comment>
@@ -80619,7 +80593,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bring to a specified condition by or as if by shaking</rdfs:comment>
@@ -80634,7 +80608,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make something, usually for a specific function</rdfs:comment>
@@ -80724,7 +80698,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">remove body hair with a razor</rdfs:comment>
@@ -80850,7 +80824,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -81162,7 +81136,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">separate by passing through a sieve or other straining device to separate out coarser elements</rdfs:comment>
@@ -81270,7 +81244,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">burn superficially or lightly</rdfs:comment>
@@ -81291,7 +81265,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fall or descend to a lower place or level</rdfs:comment>
@@ -81306,7 +81280,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cause to sink</rdfs:comment>
@@ -81321,7 +81295,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">go under,</rdfs:comment>
@@ -81426,7 +81400,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">make a sound like frying fat</rdfs:comment>
@@ -81441,7 +81415,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">burn or sear with a sizzling sound</rdfs:comment>
@@ -81531,7 +81505,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bruise, cut, or injure the skin or the surface of</rdfs:comment>
@@ -81612,7 +81586,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">throw violently</rdfs:comment>
@@ -82530,7 +82504,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eject or send out in large quantities, also metaphorical</rdfs:comment>
@@ -83646,7 +83620,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">direct the course; determine the direction of travelling</rdfs:comment>
@@ -83808,7 +83782,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fry very quickly over high heat</rdfs:comment>
@@ -84072,7 +84046,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">produce by manipulating keys or strings of musical instruments, also metaphorically</rdfs:comment>
@@ -84087,7 +84061,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pierce with force</rdfs:comment>
@@ -84102,19 +84076,19 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/NoSound"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thread on or as if on a string</rdfs:comment>
@@ -84129,12 +84103,6 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Deformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -84147,7 +84115,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">string together; tie or fasten with a string</rdfs:comment>
@@ -84162,12 +84136,6 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/SoundSource_Class"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Deformation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -84180,7 +84148,13 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SoundObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">remove the stringy parts of</rdfs:comment>
@@ -84357,7 +84331,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draw into the mouth by creating a practical vacuum in the mouth</rdfs:comment>
@@ -84843,7 +84817,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Synthetic_sound"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/SyntheticMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">combine so as to form a more complex, product</rdfs:comment>
@@ -84873,7 +84847,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adjust to a specific need or market</rdfs:comment>
@@ -85086,7 +85060,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Combustion_Engines"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/CombustionEngines"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ride in a taxicab</rdfs:comment>
@@ -85326,7 +85300,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pulsate or pound with abnormal force</rdfs:comment>
@@ -85374,7 +85348,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move violently, energetically, or carelessly</rdfs:comment>
@@ -85389,7 +85363,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place or put with great energy</rdfs:comment>
@@ -85770,7 +85744,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agitate</rdfs:comment>
@@ -86076,7 +86050,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move something or somebody around; usually over long distances</rdfs:comment>
@@ -86187,7 +86161,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">put in motion or move to act</rdfs:comment>
@@ -86406,7 +86380,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cause to move around or rotate</rdfs:comment>
@@ -86442,7 +86416,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move around an axis or a center</rdfs:comment>
@@ -86592,7 +86566,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">form into twists</rdfs:comment>
@@ -86928,7 +86902,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pull the plug of (electrical appliances) and render inoperable</rdfs:comment>
@@ -87003,7 +86977,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">remove the outer cover or wrapping of</rdfs:comment>
@@ -87033,7 +87007,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open the zipper of</rdfs:comment>
@@ -87243,7 +87217,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shake, quiver, or throb; move back and forth rapidly, usually in an uncontrolled manner</rdfs:comment>
@@ -87675,7 +87649,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clean with some chemical process</rdfs:comment>
@@ -87705,7 +87679,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cleanse with a cleaning agent, such as soap, and water</rdfs:comment>
@@ -87720,7 +87694,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">separate dirt or gravel from (precious minerals)</rdfs:comment>
@@ -87891,7 +87865,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sway to and fro</rdfs:comment>
@@ -88167,7 +88141,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fly around</rdfs:comment>
@@ -88413,7 +88387,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coil the spring of (some mechanical device) by turning a stem</rdfs:comment>
@@ -88473,7 +88447,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">separate the chaff from by using air currents</rdfs:comment>
@@ -88770,7 +88744,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">twist or pull violently or suddenly, especially so as to remove (something) from that to which it is attached or from where it originates</rdfs:comment>
@@ -88815,7 +88789,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">twist, squeeze, or compress in order to extract liquid</rdfs:comment>
@@ -88860,7 +88834,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">communicate or express by writing</rdfs:comment>
@@ -89076,7 +89050,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_mechanism"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">travel along a zigzag path</rdfs:comment>
@@ -89142,7 +89116,7 @@ They correspond to the physical event, directly causing the sound waves, which a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3id.org/VNsounds/ontology/hasMechanism"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/Unclear_investigate"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3id.org/VNsounds/ontology/UnclearMechanism"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">examine closely; focus one&apos;s attention on</rdfs:comment>
